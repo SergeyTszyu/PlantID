@@ -70,6 +70,8 @@
 		BBC0D74A2C8A82D400BBBEB9 /* PlantModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0D7492C8A82D400BBBEB9 /* PlantModels.swift */; };
 		BBC752742BDF5580008AA207 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC752732BDF5580008AA207 /* GradientLabel.swift */; };
 		BBC9EEC92CE86B7A00B48FD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBC9EEC72CE86B7A00B48FD8 /* Localizable.strings */; };
+		BBC9EEEA2CEA302C00B48FD8 /* OpenPlantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */; };
+		BBC9EEEB2CEA302C00B48FD8 /* OpenPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EEE82CEA302C00B48FD8 /* OpenPlantViewController.swift */; };
 		BBD4077D2C9B393D00FECBD3 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = BBBFF9342C985D1400737C36 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BBD9B4002C8AADCE00E138E6 /* ScannerNotFoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD9B3FF2C8AADCE00E138E6 /* ScannerNotFoundViewController.xib */; };
 		BBD9B4012C8AADCE00E138E6 /* ScannerNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9B3FE2C8AADCE00E138E6 /* ScannerNotFoundViewController.swift */; };
@@ -225,6 +227,8 @@
 		BBC0D7492C8A82D400BBBEB9 /* PlantModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModels.swift; sourceTree = "<group>"; };
 		BBC752732BDF5580008AA207 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		BBC9EEC82CE86B7A00B48FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BBC9EEE82CEA302C00B48FD8 /* OpenPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPlantViewController.swift; sourceTree = "<group>"; };
+		BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenPlantViewController.xib; sourceTree = "<group>"; };
 		BBD9B3FE2C8AADCE00E138E6 /* ScannerNotFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerNotFoundViewController.swift; sourceTree = "<group>"; };
 		BBD9B3FF2C8AADCE00E138E6 /* ScannerNotFoundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerNotFoundViewController.xib; sourceTree = "<group>"; };
 		BBD9B40B2C8BE56900E138E6 /* ScannerPlantIsHealthyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPlantIsHealthyController.swift; sourceTree = "<group>"; };
@@ -529,6 +533,15 @@
 				BBC0D7412C8A7A3800BBBEB9 /* ScannerScanningViewController.xib */,
 			);
 			path = ScannerScanningViewController;
+			sourceTree = "<group>";
+		};
+		BBC9EEE72CEA301400B48FD8 /* OpenPlant */ = {
+			isa = PBXGroup;
+			children = (
+				BBC9EEE82CEA302C00B48FD8 /* OpenPlantViewController.swift */,
+				BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */,
+			);
+			path = OpenPlant;
 			sourceTree = "<group>";
 		};
 		BBD9B3FD2C8AADB700E138E6 /* ScannrNotFoundViewController */ = {
@@ -847,6 +860,7 @@
 		FAEF718F2B4659E4000C232A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BBC9EEE72CEA301400B48FD8 /* OpenPlant */,
 				BB1E12522CDB7AFC0042E80D /* NewMyGarden */,
 				BB5B172C2C88868300E0769D /* DataPicker */,
 				BBA4C37A2C81CCDB0092D8FF /* Scanner */,
@@ -1027,6 +1041,7 @@
 				BB52F76E2C15E87D00FECB23 /* HistoryCell.xib in Resources */,
 				FAC3542B2B47C7B300C473C5 /* SFProDisplay-ThinItalic.ttf in Resources */,
 				FAC354292B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf in Resources */,
+				BBC9EEEA2CEA302C00B48FD8 /* OpenPlantViewController.xib in Resources */,
 				BBC0D7422C8A7A3800BBBEB9 /* ScannerScanningViewController.xib in Resources */,
 				BB83E0CF2CDE755200FAC3A0 /* ScannerResultIdentify.xib in Resources */,
 				FAC3542E2B47C7B300C473C5 /* SFProDisplay-Bold.ttf in Resources */,
@@ -1070,6 +1085,7 @@
 				BB11E60C2BB7266000C3D16B /* SCNSphere+Init.swift in Sources */,
 				FAD5369F2B4A7109009C57EE /* MainViewController.swift in Sources */,
 				BB291CE12C6D176F00A31590 /* ChecklistCollectionViewCell.swift in Sources */,
+				BBC9EEEB2CEA302C00B48FD8 /* OpenPlantViewController.swift in Sources */,
 				993155EA2B6BEC7F0008EE8C /* Url.swift in Sources */,
 				FA6E51532B59F1320041B7EC /* CameraRouterDelegate.swift in Sources */,
 				FAD536C12B4D1C45009C57EE /* SettingsViewController.swift in Sources */,

@@ -84,7 +84,7 @@ class ScannerViewController: UIViewController,
     @IBAction func backAction(_ sender: UIButton) {
         self.navigationController?.popToRootViewController(animated: true)
     }
-
+    
     @IBAction func flashAction(_ sender: UIButton) {
         guard let device = AVCaptureDevice.default(for: .video), device.hasTorch else {
              return

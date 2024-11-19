@@ -167,14 +167,14 @@ final class NewMyGardenViewController: BaseViewController {
     }
     
     @objc func addButtonTapped() {
-        let preScannerViewController = ScannerFirstViewController()
-        preScannerViewController.delegate = self
-//        preScannerViewController.modalPresentationStyle = .overFullScreen
-//        preScannerViewController.modalTransitionStyle = .crossDissolve
-        let nav = UINavigationController(rootViewController: preScannerViewController)
-        nav.modalPresentationStyle = .overFullScreen
-        nav.modalTransitionStyle = .crossDissolve
-        self.present(nav, animated: true)
+//        let preScannerViewController = ScannerFirstViewController()
+//        preScannerViewController.delegate = self
+//        let nav = UINavigationController(rootViewController: preScannerViewController)
+//        nav.modalPresentationStyle = .overFullScreen
+//        nav.modalTransitionStyle = .crossDissolve
+//        self.present(nav, animated: true)
+        let vc = OpenPlantViewController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
