@@ -35,6 +35,8 @@
 		BB36532A2C67AC6000858C98 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3653292C67AC6000858C98 /* BaseViewController.swift */; };
 		BB36532D2C69218F00858C98 /* HistoryDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36532C2C69218F00858C98 /* HistoryDataViewController.swift */; };
 		BB3653322C6B47AA00858C98 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3653312C6B47AA00858C98 /* OnboardingButton.swift */; };
+		BB4164482CECDC5100D3281E /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB4164472CECDC5100D3281E /* ChatViewController.xib */; };
+		BB4164492CECDC5100D3281E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4164462CECDC5100D3281E /* ChatViewController.swift */; };
 		BB4C5EC92C149341003F23EB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C5EC82C149340003F23EB /* HistoryViewController.swift */; };
 		BB4C7EB62C8C1BF1000ED4A6 /* PlainPlantModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C7EB52C8C1BF1000ED4A6 /* PlainPlantModels.swift */; };
 		BB4F75462C4402E100010CFF /* DiscountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F75452C4402E100010CFF /* DiscountManager.swift */; };
@@ -196,6 +198,8 @@
 		BB3653292C67AC6000858C98 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BB36532C2C69218F00858C98 /* HistoryDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataViewController.swift; sourceTree = "<group>"; };
 		BB3653312C6B47AA00858C98 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
+		BB4164462CECDC5100D3281E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		BB4164472CECDC5100D3281E /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		BB4C5EC82C149340003F23EB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BB4C7EB52C8C1BF1000ED4A6 /* PlainPlantModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainPlantModels.swift; sourceTree = "<group>"; };
 		BB4F75452C4402E100010CFF /* DiscountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountManager.swift; sourceTree = "<group>"; };
@@ -420,6 +424,15 @@
 				FA7183BB2C7BAD4A0068974B /* History.xcdatamodeld */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		BB4164452CECDC4600D3281E /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				BB4164462CECDC5100D3281E /* ChatViewController.swift */,
+				BB4164472CECDC5100D3281E /* ChatViewController.xib */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 		BB4C5EC72C149327003F23EB /* History */ = {
@@ -860,6 +873,7 @@
 		FAEF718F2B4659E4000C232A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BB4164452CECDC4600D3281E /* Chat */,
 				BBC9EEE72CEA301400B48FD8 /* OpenPlant */,
 				BB1E12522CDB7AFC0042E80D /* NewMyGarden */,
 				BB5B172C2C88868300E0769D /* DataPicker */,
@@ -1030,6 +1044,7 @@
 			files = (
 				BB19E0BA2C85935B009CED7D /* MyGardenCell.xib in Resources */,
 				BB5B17262C88323300E0769D /* ReviewCell.xib in Resources */,
+				BB4164482CECDC5100D3281E /* ChatViewController.xib in Resources */,
 				FAC3542D2B47C7B300C473C5 /* SFProDisplay-BlackItalic.ttf in Resources */,
 				BB19E0B32C8549A4009CED7D /* SettingsListCell.xib in Resources */,
 				BB5B17212C87F36500E0769D /* MyGardenRemoveViewController.xib in Resources */,
@@ -1136,6 +1151,7 @@
 				BBA4C3792C81CB440092D8FF /* MyGardenViewController.swift in Sources */,
 				FA7183C92C7CFBED0068974B /* EnlargedButton.swift in Sources */,
 				FAC354402B491F4000C473C5 /* ChildViewItems.swift in Sources */,
+				BB4164492CECDC5100D3281E /* ChatViewController.swift in Sources */,
 				FAD536C52B4D1CAB009C57EE /* SettingsRoutingDelegate.swift in Sources */,
 				FAC354382B482EEA00C473C5 /* PaywallRouterDelegate.swift in Sources */,
 				FAC3543A2B482F0C00C473C5 /* PaywallCoordinator.swift in Sources */,

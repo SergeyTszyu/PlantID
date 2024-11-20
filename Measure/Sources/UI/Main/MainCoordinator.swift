@@ -29,7 +29,7 @@ class MainCoordinator: Coordinator {
         let gardenViewController = NewMyGardenViewController()
         let gardenNavigationController = UINavigationController(rootViewController: gardenViewController)
         
-        let historyViewController = HistoryViewController()
+        let historyViewController = ChatViewController()
         let historyNavigationConntroller = UINavigationController(rootViewController: historyViewController)
         
         gardenNavigationController.tabBarItem = UITabBarItem(title: "My Garden",
