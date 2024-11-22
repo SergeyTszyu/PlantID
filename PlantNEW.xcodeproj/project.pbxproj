@@ -17,6 +17,8 @@
 		BB11E6092BB7266000C3D16B /* LineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6022BB7266000C3D16B /* LineNode.swift */; };
 		BB11E60A2BB7266000C3D16B /* MeasureSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6032BB7266000C3D16B /* MeasureSCNView.swift */; };
 		BB11E60C2BB7266000C3D16B /* SCNSphere+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6052BB7266000C3D16B /* SCNSphere+Init.swift */; };
+		BB12DFFF2CEFEBED002CC421 /* Onboarding2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */; };
+		BB12E0002CEFEBED002CC421 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */; };
 		BB19E0AE2C85478A009CED7D /* SettingsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19E0AC2C85478A009CED7D /* SettingsSwitchCell.swift */; };
 		BB19E0AF2C85478A009CED7D /* SettingsSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB19E0AD2C85478A009CED7D /* SettingsSwitchCell.xib */; };
 		BB19E0B22C8549A4009CED7D /* SettingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19E0B02C8549A4009CED7D /* SettingsListCell.swift */; };
@@ -37,6 +39,10 @@
 		BB3653322C6B47AA00858C98 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3653312C6B47AA00858C98 /* OnboardingButton.swift */; };
 		BB4164482CECDC5100D3281E /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB4164472CECDC5100D3281E /* ChatViewController.xib */; };
 		BB4164492CECDC5100D3281E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4164462CECDC5100D3281E /* ChatViewController.swift */; };
+		BB41644D2CEE629F00D3281E /* OpenPlantEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB41644C2CEE629F00D3281E /* OpenPlantEditViewController.xib */; };
+		BB41644E2CEE629F00D3281E /* OpenPlantEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB41644B2CEE629F00D3281E /* OpenPlantEditViewController.swift */; };
+		BB4164522CEFB92C00D3281E /* Onboarding1ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB4164512CEFB92C00D3281E /* Onboarding1ViewController.xib */; };
+		BB4164532CEFB92C00D3281E /* Onboarding1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4164502CEFB92C00D3281E /* Onboarding1ViewController.swift */; };
 		BB4C5EC92C149341003F23EB /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C5EC82C149340003F23EB /* HistoryViewController.swift */; };
 		BB4C7EB62C8C1BF1000ED4A6 /* PlainPlantModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4C7EB52C8C1BF1000ED4A6 /* PlainPlantModels.swift */; };
 		BB4F75462C4402E100010CFF /* DiscountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F75452C4402E100010CFF /* DiscountManager.swift */; };
@@ -180,6 +186,8 @@
 		BB11E6022BB7266000C3D16B /* LineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineNode.swift; sourceTree = "<group>"; };
 		BB11E6032BB7266000C3D16B /* MeasureSCNView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureSCNView.swift; sourceTree = "<group>"; };
 		BB11E6052BB7266000C3D16B /* SCNSphere+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNSphere+Init.swift"; sourceTree = "<group>"; };
+		BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
+		BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding2ViewController.xib; sourceTree = "<group>"; };
 		BB19E0AC2C85478A009CED7D /* SettingsSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchCell.swift; sourceTree = "<group>"; };
 		BB19E0AD2C85478A009CED7D /* SettingsSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSwitchCell.xib; sourceTree = "<group>"; };
 		BB19E0B02C8549A4009CED7D /* SettingsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListCell.swift; sourceTree = "<group>"; };
@@ -200,6 +208,10 @@
 		BB3653312C6B47AA00858C98 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		BB4164462CECDC5100D3281E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BB4164472CECDC5100D3281E /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		BB41644B2CEE629F00D3281E /* OpenPlantEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPlantEditViewController.swift; sourceTree = "<group>"; };
+		BB41644C2CEE629F00D3281E /* OpenPlantEditViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenPlantEditViewController.xib; sourceTree = "<group>"; };
+		BB4164502CEFB92C00D3281E /* Onboarding1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding1ViewController.swift; sourceTree = "<group>"; };
+		BB4164512CEFB92C00D3281E /* Onboarding1ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding1ViewController.xib; sourceTree = "<group>"; };
 		BB4C5EC82C149340003F23EB /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BB4C7EB52C8C1BF1000ED4A6 /* PlainPlantModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlainPlantModels.swift; sourceTree = "<group>"; };
 		BB4F75452C4402E100010CFF /* DiscountManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscountManager.swift; sourceTree = "<group>"; };
@@ -359,6 +371,15 @@
 			path = NewCamera;
 			sourceTree = "<group>";
 		};
+		BB12DFFC2CEFEBE0002CC421 /* Onboarding2 */ = {
+			isa = PBXGroup;
+			children = (
+				BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */,
+				BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */,
+			);
+			path = Onboarding2;
+			sourceTree = "<group>";
+		};
 		BB19E0B62C859349009CED7D /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +454,24 @@
 				BB4164472CECDC5100D3281E /* ChatViewController.xib */,
 			);
 			path = Chat;
+			sourceTree = "<group>";
+		};
+		BB41644A2CEE629000D3281E /* OpenPlantEdit */ = {
+			isa = PBXGroup;
+			children = (
+				BB41644B2CEE629F00D3281E /* OpenPlantEditViewController.swift */,
+				BB41644C2CEE629F00D3281E /* OpenPlantEditViewController.xib */,
+			);
+			path = OpenPlantEdit;
+			sourceTree = "<group>";
+		};
+		BB41644F2CEFB91D00D3281E /* Onboarding1 */ = {
+			isa = PBXGroup;
+			children = (
+				BB4164502CEFB92C00D3281E /* Onboarding1ViewController.swift */,
+				BB4164512CEFB92C00D3281E /* Onboarding1ViewController.xib */,
+			);
+			path = Onboarding1;
 			sourceTree = "<group>";
 		};
 		BB4C5EC72C149327003F23EB /* History */ = {
@@ -863,6 +902,7 @@
 		FAEF718E2B4659D0000C232A /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				BB41644A2CEE629000D3281E /* OpenPlantEdit */,
 				FAD536C82B4D25A8009C57EE /* CustomViews */,
 				FAEF718F2B4659E4000C232A /* UI */,
 				FAEF71902B4659EF000C232A /* Storyboards */,
@@ -901,6 +941,8 @@
 		FAEF71912B465AE5000C232A /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				BB12DFFC2CEFEBE0002CC421 /* Onboarding2 */,
+				BB41644F2CEFB91D00D3281E /* Onboarding1 */,
 				BB5B17222C88321B00E0769D /* Cell */,
 				BB3653302C6B479300858C98 /* OnboardingButton */,
 				FAC3541A2B468D0400C473C5 /* OnboardingItems */,
@@ -1050,11 +1092,13 @@
 				BB5B17212C87F36500E0769D /* MyGardenRemoveViewController.xib in Resources */,
 				BB1E12552CDB7B160042E80D /* NewMyGardenViewController.xib in Resources */,
 				BB291CE22C6D176F00A31590 /* ChecklistCollectionViewCell.xib in Resources */,
+				BB12DFFF2CEFEBED002CC421 /* Onboarding2ViewController.xib in Resources */,
 				FAC3542C2B47C7B300C473C5 /* SFProDisplay-Regular.ttf in Resources */,
 				FAEF71532B46566A000C232A /* LaunchScreen.storyboard in Resources */,
 				BB5B17302C88869500E0769D /* DataPickerViewController.xib in Resources */,
 				BB52F76E2C15E87D00FECB23 /* HistoryCell.xib in Resources */,
 				FAC3542B2B47C7B300C473C5 /* SFProDisplay-ThinItalic.ttf in Resources */,
+				BB4164522CEFB92C00D3281E /* Onboarding1ViewController.xib in Resources */,
 				FAC354292B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf in Resources */,
 				BBC9EEEA2CEA302C00B48FD8 /* OpenPlantViewController.xib in Resources */,
 				BBC0D7422C8A7A3800BBBEB9 /* ScannerScanningViewController.xib in Resources */,
@@ -1068,6 +1112,7 @@
 				BBD9B40D2C8BE56900E138E6 /* ScannerPlantIsHealthyController.xib in Resources */,
 				BB19E0AF2C85478A009CED7D /* SettingsSwitchCell.xib in Resources */,
 				FAC3542F2B47C7B300C473C5 /* SFProDisplay-HeavyItalic.ttf in Resources */,
+				BB41644D2CEE629F00D3281E /* OpenPlantEditViewController.xib in Resources */,
 				BB56E7FB2C8A2E6000A3723B /* ScannerViewController.xib in Resources */,
 				FAEF71502B46566A000C232A /* Assets.xcassets in Resources */,
 				FAC354302B47C7B300C473C5 /* SFProDisplay-LightItalic.ttf in Resources */,
@@ -1103,6 +1148,7 @@
 				BBC9EEEB2CEA302C00B48FD8 /* OpenPlantViewController.swift in Sources */,
 				993155EA2B6BEC7F0008EE8C /* Url.swift in Sources */,
 				FA6E51532B59F1320041B7EC /* CameraRouterDelegate.swift in Sources */,
+				BB4164532CEFB92C00D3281E /* Onboarding1ViewController.swift in Sources */,
 				FAD536C12B4D1C45009C57EE /* SettingsViewController.swift in Sources */,
 				BB3653322C6B47AA00858C98 /* OnboardingButton.swift in Sources */,
 				FAEF71952B465B74000C232A /* OnboardingRouterDelegate.swift in Sources */,
@@ -1142,6 +1188,7 @@
 				9910CA312B6A64E600336735 /* PremiumManager.swift in Sources */,
 				BBC0D74A2C8A82D400BBBEB9 /* PlantModels.swift in Sources */,
 				993155EC2B6BF5720008EE8C /* IncreasedTapAreaButton.swift in Sources */,
+				BB41644E2CEE629F00D3281E /* OpenPlantEditViewController.swift in Sources */,
 				FA6E51512B59F1120041B7EC /* CameraViewModel.swift in Sources */,
 				BB28F41B2C1AF4B4004A0519 /* UIButton+Extensions.swift in Sources */,
 				BB19E0B22C8549A4009CED7D /* SettingsListCell.swift in Sources */,
@@ -1166,6 +1213,7 @@
 				FA6E514F2B59F0CB0041B7EC /* CameraViewController.swift in Sources */,
 				BB5B17322C88895A00E0769D /* CornerView.swift in Sources */,
 				FAD536C32B4D1C84009C57EE /* SettingsViewModel.swift in Sources */,
+				BB12E0002CEFEBED002CC421 /* Onboarding2ViewController.swift in Sources */,
 				FAD536AB2B4AF526009C57EE /* MeasureIdeasCell.swift in Sources */,
 				BB23F5DA2C91691500AAA386 /* PaywallViewController.swift in Sources */,
 				FAEF71802B46583A000C232A /* UIColor+Extensions.swift in Sources */,

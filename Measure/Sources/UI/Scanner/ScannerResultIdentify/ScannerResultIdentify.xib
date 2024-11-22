@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerResultIdentify" customModule="PlantNEW_App" customModuleProvider="target">
             <connections>
+                <outlet property="addToGardenButton" destination="Hzy-Wl-Zka" id="BtZ-KU-nKI"/>
                 <outlet property="tableView" destination="YDk-md-aTl" id="0QB-Eh-LQp"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -43,6 +44,9 @@
                             <integer key="value" value="20"/>
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="addToGarden:" destination="-1" eventType="touchUpInside" id="KtO-hj-oXU"/>
+                    </connections>
                 </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>

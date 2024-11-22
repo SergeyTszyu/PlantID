@@ -18,6 +18,17 @@ final class OnboardingFirstViewController: BaseViewController {
         return imageView
     }()
     
+    private let gradientLayer: CAGradientLayer = {
+        let layer = CAGradientLayer()
+        layer.colors = [
+            UIColor(hexString: "#000000")!.withAlphaComponent(0).cgColor,
+            UIColor(hexString: "#10271A")!.withAlphaComponent(0.7).cgColor
+        ]
+        layer.startPoint = CGPoint(x: 0.5, y: 0.0) // Начало сверху
+        layer.endPoint = CGPoint(x: 0.5, y: 1.0)   // Конец снизу
+        return layer
+    }()
+    
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Theme.whiteColor
@@ -39,21 +50,36 @@ final class OnboardingFirstViewController: BaseViewController {
         return label
     }()
     
-    private lazy var skipButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "NavigationButton-Skip")!, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(skipPressed), for: .touchUpInside)
-        button.tintColor = Theme.whiteColor
-        return button
-    }()
-    
     private lazy var continueButton: UIButton = {
         let button = UIButton(type: .system)
-        Theme.buttonStyle(button, title: "Continue")
+        Theme.buttonStyle(button, title: "Get Started!")
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(continuePressed), for: .touchUpInside)
         return button
+    }()
+    
+    private func addGradient() {
+        gradientLayer.frame = backgroundImageView.bounds
+        backgroundImageView.layer.addSublayer(gradientLayer)
+    }
+    
+    private lazy var bottomButtonsStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.distribution = .equalSpacing
+        stackView.spacing = 16
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+
+        let restoreButton = createBottomButton(withTitle: "Restore Purchases", action: #selector(restoreTapped))
+        let privacyButton = createBottomButton(withTitle: "Terms of Use", action: #selector(privacyTapped))
+        let termsButton = createBottomButton(withTitle: "Privacy Policy", action: #selector(termsTapped))
+
+        stackView.addArrangedSubview(termsButton)
+        stackView.addArrangedSubview(restoreButton)
+        stackView.addArrangedSubview(privacyButton)
+
+        return stackView
     }()
     
     // MARK: - Properties
@@ -71,8 +97,20 @@ final class OnboardingFirstViewController: BaseViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        gradientLayer.frame = backgroundImageView.bounds
+        Theme.buttonStyle(continueButton, title: "Get Started!")
+    }
+    
+    @objc private func restoreTapped() {
         
-        Theme.buttonStyle(continueButton, title: "Continue")
+    }
+    
+    @objc private func privacyTapped() {
+        openURL(Url.privacy.rawValue)
+    }
+    
+    @objc private func termsTapped() {
+        openURL(Url.terms.rawValue)
     }
 
 }
@@ -82,14 +120,15 @@ private extension OnboardingFirstViewController {
     func configure() {
         setupHierarchy()
         setupConstraints()
+        addGradient()
     }
     
     func setupHierarchy() {
         view.addSubviews([backgroundImageView,
-                          skipButton,
                           titleLabel,
                           subtitleLabel,
-                          continueButton])
+                          continueButton,
+                          bottomButtonsStackView])
     }
     
     func setupConstraints() {
@@ -99,14 +138,15 @@ private extension OnboardingFirstViewController {
             backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             backgroundImageView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
             
-            skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            skipButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            skipButton.heightAnchor.constraint(equalToConstant: 38),
-            
             continueButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             continueButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            continueButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
+            continueButton.bottomAnchor.constraint(equalTo: bottomButtonsStackView.topAnchor, constant: -80),
             continueButton.heightAnchor.constraint(equalToConstant: 60),
+            
+            bottomButtonsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            bottomButtonsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            bottomButtonsStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -24),
+            bottomButtonsStackView.heightAnchor.constraint(equalToConstant: 50),
             
             titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
@@ -124,5 +164,16 @@ private extension OnboardingFirstViewController {
     
     @objc func skipPressed() {
         self.delegateRouting?.routeToTrialView()
+    }
+    
+    func createBottomButton(withTitle title: String, action: Selector) -> UIButton {
+        let button = UIButton(type: .system)
+        button.setTitle(title, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 12, weight: .semibold)
+        button.setTitleColor(UIColor(hexString: "#CFCFCF"), for: .normal)
+        button.addTarget(self, action: action, for: .touchUpInside)
+        button.backgroundColor = .clear
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }
 }

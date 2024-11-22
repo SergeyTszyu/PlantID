@@ -23,11 +23,13 @@ class ScannerNotFoundViewController: BaseViewController {
         
         switch ccannerResultType {
         case .notFound:
+            typeImagegVIew.image = UIImage(named: "Scanner-NotFound")!
             topTextLabel.text = "Plant not found"
             bottomTextLabel.text = "Please try again. Check image quality, angle and lighting"
         case .isHealthy:
-            topTextLabel.text = "Plant not found"
-            bottomTextLabel.text = "Please try again. Check image quality, angle and lighting"
+            typeImagegVIew.image = UIImage(named: "isHealthy")!
+            topTextLabel.text = "Plant is healthy!"
+            bottomTextLabel.text = "Your Strelitzia is thriving. Keep up the good care!"
         }
     }
     

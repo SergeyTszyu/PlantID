@@ -94,22 +94,19 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         view.addSubview(messageInputContainer)
         
         // TextField setup
-//        messageTextField.placeholder = "Type a message..."
-//        messageTextField.borderStyle = .roundedRect
-//        messageTextField.backgroundColor = UIColor(hexString: "#CFCFCF")?.withAlphaComponent(0.5)
-//        messageTextField.layer.cornerRadius = 25
-//        messageTextField.clipsToBounds = true
-//        messageTextField.delegate = self
-//        messageInputContainer.addSubview(messageTextField)
-//
-        
-        // TextField setup
         messageTextField.placeholder = "Type a message..."
         messageTextField.borderStyle = .roundedRect
         messageTextField.backgroundColor = UIColor(hexString: "#CFCFCF")?.withAlphaComponent(0.5)
         messageTextField.layer.cornerRadius = 25
         messageTextField.clipsToBounds = true
         messageTextField.delegate = self
+        messageTextField.attributedPlaceholder = NSAttributedString(
+            string: "Type a message...",
+            attributes: [
+                .foregroundColor: UIColor(hexString: "#A6ADB3")!,
+                .font: UIFont.systemFont(ofSize: 16)
+            ]
+        )
 
         // Add padding to the left
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 50))
@@ -275,6 +272,8 @@ class ChatMessageCell: UITableViewCell {
         avatarImageView.clipsToBounds = true
         avatarImageView.image = UIImage(named: "Bot-Image")
         contentView.addSubview(avatarImageView)
+        
+        backgroundColor = .clear
     }
     
     override func prepareForReuse() {

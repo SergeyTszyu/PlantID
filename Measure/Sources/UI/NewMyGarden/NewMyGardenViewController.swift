@@ -100,6 +100,8 @@ final class NewMyGardenViewController: BaseViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        fetchPlantIdentificationResponses()
     }
     
     private func configure() {
@@ -122,6 +124,13 @@ final class NewMyGardenViewController: BaseViewController {
         historyData = realm.objects(ScanHistoryRealm.self).sorted(byKeyPath: "scanDate", ascending: false)
         myGardenTableView.reloadData()
         updateEmptyStateVisibility()
+    }
+    
+    private func fetchPlantIdentificationResponses() {
+        plantResponses = mainRealm.objects(PlantIdentificationResponse.self).filter("isAddedToGarden == true")
+            .sorted(byKeyPath: "scanDate", ascending: false)
+        isEmpty = plantResponses?.isEmpty ?? true
+        myGardenTableView.reloadData()
     }
     
     func updateEmptyStateVisibility() {
@@ -167,14 +176,14 @@ final class NewMyGardenViewController: BaseViewController {
     }
     
     @objc func addButtonTapped() {
-//        let preScannerViewController = ScannerFirstViewController()
-//        preScannerViewController.delegate = self
-//        let nav = UINavigationController(rootViewController: preScannerViewController)
-//        nav.modalPresentationStyle = .overFullScreen
-//        nav.modalTransitionStyle = .crossDissolve
-//        self.present(nav, animated: true)
-        let vc = OpenPlantViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        let preScannerViewController = ScannerFirstViewController()
+        preScannerViewController.delegate = self
+        let nav = UINavigationController(rootViewController: preScannerViewController)
+        nav.modalPresentationStyle = .overFullScreen
+        nav.modalTransitionStyle = .crossDissolve
+        self.present(nav, animated: true)
+//        let vc = OpenPlantViewController()
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -184,11 +193,11 @@ extension NewMyGardenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let obj = plantResponses?[indexPath.row] {
-            let vc = ScannerResultViewController()
-            vc.result = obj
-            vc.scannerType = .identify
-            vc.image = UIImage(data: obj.localImageData!)
-            self.navigationController?.pushViewController(vc, animated: true)
+//            let vc = ScannerResultViewController()
+//            vc.result = obj
+//            vc.scannerType = .identify
+//            vc.image = UIImage(data: obj.localImageData!)
+//            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
     
@@ -202,8 +211,7 @@ extension NewMyGardenViewController: UITableViewDelegate {
 extension NewMyGardenViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return contentType == .myGarden ? plantResponses?.count ?? 0 : historyData?.count ?? 0
-        return 1
+        return contentType == .myGarden ? plantResponses?.count ?? 0 : historyData?.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -216,6 +224,9 @@ extension NewMyGardenViewController: UITableViewDataSource {
             return myGardenCell
         } else {
             let historyCell = tableView.dequeueReusableCell(withIdentifier: HistoryCell.identifier, for: indexPath) as! HistoryCell
+            if let historyItem = historyData?[indexPath.row] {
+                historyCell.fill(historyItem)
+            }
             return historyCell
         }
     }

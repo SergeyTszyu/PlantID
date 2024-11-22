@@ -223,11 +223,13 @@ final class ScannerManager: AnyObject {
 //                            vc.result = plantResponse
 //                            vc.scannerType = .diagnose
 //                            vc.image = scanningImage
-                            realmWrite {
-                                mainRealm.add(response, update: .modified)
-                            }
-                            realmWrite {
-                                mainRealm.add(plantResponse, update: .modified)
+                            DispatchQueue.main.async {
+                                realmWrite {
+                                    mainRealm.add(response, update: .modified)
+                                }
+                                realmWrite {
+                                    mainRealm.add(plantResponse, update: .modified)
+                                }
                             }
                             savePlantToHistoryHealthy(plantResponse,
                                                       response: response,
@@ -251,7 +253,6 @@ final class ScannerManager: AnyObject {
                 print("Request failed: \(error.localizedDescription)")
             }
         }
-        
     }
     
     func handlePlantIdentification(_ response: PlantIdentificationResponse) {

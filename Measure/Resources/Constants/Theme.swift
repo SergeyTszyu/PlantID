@@ -28,7 +28,7 @@ struct Theme {
     static func buttonStyle(_ button: UIButton, title: String = "") {
         button.setTitleColor(Theme.whiteColor, for: .normal)
         button.layer.cornerRadius = 20
-        button.titleLabel?.font = Fonts.medium.addFont(16)
+        button.titleLabel?.font = Fonts.medium.addFont(17)
         button.setTitle(title, for: .normal)
         button.clipsToBounds = true
         button.backgroundColor = UIColor(hexString: "#0A9E03")

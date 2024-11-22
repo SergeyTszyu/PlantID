@@ -93,7 +93,7 @@ final class SettingsViewController: BaseViewController {
         center.getPendingNotificationRequests { [weak self] requests in
             guard let self = self else { return }
             let hasNotifications = requests.contains { request in
-                return request.identifier == "NotificationIdentifier"
+                return request.identifier == "PlantNotificationIdentifier"
             }
             
             DispatchQueue.main.async {

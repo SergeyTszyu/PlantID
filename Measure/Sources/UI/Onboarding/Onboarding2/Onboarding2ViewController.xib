@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Onboarding2ViewController" customModule="PlantNEW_App" customModuleProvider="target">
+            <connections>
+                <outlet property="nextButton" destination="Dog-WP-cPC" id="73O-xG-cdA"/>
+                <outlet property="onbBottomTextLabel" destination="WsL-bb-JOE" id="5zC-sr-gV8"/>
+                <outlet property="onbImageeView" destination="ggM-Ot-tqh" id="qLe-sB-eNf"/>
+                <outlet property="onbTopTextLabel" destination="UTE-zR-UxJ" id="2G1-nB-1ng"/>
+                <outlet property="view" destination="ikO-5K-a6l" id="pCB-Z8-GO1"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="ikO-5K-a6l">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ggM-Ot-tqh">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBA-NO-Sdh">
+                    <rect key="frame" x="0.0" y="0.0" width="204" height="852"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diagnose disease" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTE-zR-UxJ">
+                            <rect key="frame" x="16" y="391.66666666666669" width="172" height="83.666666666666686"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <color key="textColor" red="0.1137254902" green="0.23529411759999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dog-WP-cPC">
+                            <rect key="frame" x="16" y="648" width="182" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Aip-20-QH9"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover treatment options for every identified disease" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsL-bb-JOE">
+                            <rect key="frame" x="16" y="491.33333333333331" width="172" height="64.666666666666686"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                            <color key="textColor" red="0.51372549020000002" green="0.55294117649999996" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="WsL-bb-JOE" firstAttribute="leading" secondItem="eBA-NO-Sdh" secondAttribute="leading" constant="16" id="8fK-vC-mTl"/>
+                        <constraint firstItem="UTE-zR-UxJ" firstAttribute="leading" secondItem="eBA-NO-Sdh" secondAttribute="leading" constant="16" id="Abr-C3-8Hq"/>
+                        <constraint firstItem="Dog-WP-cPC" firstAttribute="top" secondItem="WsL-bb-JOE" secondAttribute="bottom" constant="92" id="HxI-Yd-w0g"/>
+                        <constraint firstAttribute="trailing" secondItem="UTE-zR-UxJ" secondAttribute="trailing" constant="16" id="JgW-OJ-rsx"/>
+                        <constraint firstAttribute="width" constant="204" id="Qoj-JK-aLP"/>
+                        <constraint firstAttribute="bottom" secondItem="Dog-WP-cPC" secondAttribute="bottom" constant="154" id="bUI-J2-fYx"/>
+                        <constraint firstAttribute="trailing" secondItem="Dog-WP-cPC" secondAttribute="trailing" constant="6" id="dg6-dQ-4qY"/>
+                        <constraint firstItem="WsL-bb-JOE" firstAttribute="top" secondItem="UTE-zR-UxJ" secondAttribute="bottom" constant="16" id="fUI-Vm-Jla"/>
+                        <constraint firstAttribute="trailing" secondItem="WsL-bb-JOE" secondAttribute="trailing" constant="16" id="ghh-3b-SzL"/>
+                        <constraint firstItem="Dog-WP-cPC" firstAttribute="leading" secondItem="eBA-NO-Sdh" secondAttribute="leading" constant="16" id="y95-6s-HQL"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="rHL-04-rjT"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eBA-NO-Sdh" firstAttribute="top" secondItem="ikO-5K-a6l" secondAttribute="top" id="2IK-EP-nnq"/>
+                <constraint firstAttribute="bottom" secondItem="ggM-Ot-tqh" secondAttribute="bottom" id="3AJ-mk-LBV"/>
+                <constraint firstItem="eBA-NO-Sdh" firstAttribute="leading" secondItem="rHL-04-rjT" secondAttribute="leading" id="64k-Jm-g0u"/>
+                <constraint firstItem="ggM-Ot-tqh" firstAttribute="trailing" secondItem="rHL-04-rjT" secondAttribute="trailing" id="ezF-4W-MFk"/>
+                <constraint firstItem="ggM-Ot-tqh" firstAttribute="top" secondItem="ikO-5K-a6l" secondAttribute="top" id="qCr-XD-VCd"/>
+                <constraint firstItem="ggM-Ot-tqh" firstAttribute="leading" secondItem="rHL-04-rjT" secondAttribute="leading" id="rCt-OO-AUG"/>
+                <constraint firstAttribute="bottom" secondItem="eBA-NO-Sdh" secondAttribute="bottom" id="vJq-iP-vcW"/>
+            </constraints>
+            <point key="canvasLocation" x="75.572519083969468" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

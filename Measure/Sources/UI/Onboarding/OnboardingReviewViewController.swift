@@ -5,9 +5,7 @@
 import UIKit
 
 struct Review {
-    var name: String
     var image: UIImage
-    var text: String
 }
 
 final class OnboardingReviewViewController: BaseViewController, UICollectionViewDelegateFlowLayout {
@@ -27,7 +25,7 @@ final class OnboardingReviewViewController: BaseViewController, UICollectionView
             layout.minimumInteritemSpacing = 0
         }
         collectionView.isPagingEnabled = true
-        collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .clear
         collectionView.clipsToBounds = false
         collectionView.showsHorizontalScrollIndicator = false
         return collectionView
@@ -37,18 +35,18 @@ final class OnboardingReviewViewController: BaseViewController, UICollectionView
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 35, weight: .bold)
-        label.textColor = UIColor.black
+        label.textColor = UIColor(hexString: "#1D3C2B")
         label.textAlignment = .center
-        label.text = "New opportunities"
+        label.text = "What users think"
         return label
     }()
     
     private lazy var pageControl: UIPageControl = {
         let pageControl = UIPageControl()
-        pageControl.numberOfPages = 3
+        pageControl.numberOfPages = 4
         pageControl.currentPage = 0
-        pageControl.pageIndicatorTintColor = UIColor(hexString: "#D9D9D9")
-        pageControl.currentPageIndicatorTintColor = UIColor(hexString: "#45814E")
+        pageControl.pageIndicatorTintColor = UIColor(hexString: "#CFCFCF")
+        pageControl.currentPageIndicatorTintColor = UIColor(hexString: "#FE8331")
         pageControl.translatesAutoresizingMaskIntoConstraints = false
         return pageControl
     }()
@@ -57,25 +55,17 @@ final class OnboardingReviewViewController: BaseViewController, UICollectionView
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
-        label.textColor = UIColor(hexString: "#404A3E")
-        label.text = "9.99$/week, 99.9% accuracy of \nidentification, tips and treatment plant"
+        label.textColor = UIColor(hexString: "#838D87")
+        label.text = "Trusted by users for real impact and \npositive results daily."
         label.numberOfLines = 0
         label.textAlignment = .center
         return label
     }()
     
-    private lazy var skipButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "NavigationButton-Skip")!, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.addTarget(self, action: #selector(skipPressed), for: .touchUpInside)
-        button.tintColor = UIColor(hexString: "#404A3E")
-        return button
-    }()
-        
-    private let reviews = [Review(name: "Sarah Miller", image: UIImage(named: "Review-Sarah") ?? UIImage(), text: "\"This app feels like a personal plant assistant, offering helpful reminders and plant identification features that make caring for my plants so much easier and enjoyable.\""),
-                           Review(name: "Olivia Brown", image: UIImage(named: "Review-Emma") ?? UIImage(), text: "\"This app is a game-changer! Although I’ve only been using it for a short time, my plants have never looked better. I love the easy-to-use reminders for watering and feeding, which take away all the guesswork and keep my plants thriving.\""),
-                           Review(name: "James Anderson", image: UIImage(named: "Review-James") ?? UIImage(), text: "\"Incredible tool for plant care. I’ve been using this app for a few weeks now, and it’s made a huge difference. My plants are healthier, and I don’t have to worry about forgetting when to water or fertilize. The notifications are spot-on and really helpful.\"")]
+    private let reviews = [Review(image: UIImage(named: "Review1")!),
+                           Review(image: UIImage(named: "Review2")!),
+                           Review(image: UIImage(named: "Review3")!),
+                           Review(image: UIImage(named: "Review4")!)]
     
     var viewModel: OnboardingViewModel?
     var delegateRouting: OnboardingRouterDelegate?
@@ -105,25 +95,26 @@ final class OnboardingReviewViewController: BaseViewController, UICollectionView
     private func setupLayout() {
         view.addSubview(titleLabel)
         view.addSubview(collectionView)
-        view.addSubview(skipButton)
         view.addSubview(pageControl)
-
+        view.addSubview(subTitleLabel)
+        
         NSLayoutConstraint.activate([
             
-            skipButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
-            skipButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            
-            titleLabel.topAnchor.constraint(equalTo: skipButton.bottomAnchor, constant: 16),
-            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
-            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            
-            collectionView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 66),
+            collectionView.topAnchor.constraint(equalTo: view.topAnchor, constant: 132),
             collectionView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            collectionView.heightAnchor.constraint(equalToConstant: 316),
+            collectionView.heightAnchor.constraint(equalToConstant: 248),
             
-            pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 28),
+            pageControl.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 16),
             pageControl.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            titleLabel.topAnchor.constraint(equalTo: pageControl.bottomAnchor, constant: 54),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            
+            subTitleLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 16),
+            subTitleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            subTitleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
         ])
     }
 

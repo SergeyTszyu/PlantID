@@ -63,14 +63,15 @@ final class DataPickerViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        UIView.animate(withDuration: 0.5) {
-            self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        }
+//        UIView.animate(withDuration: 0.5) {
+//            
+//        }
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
     }
     
     func configure() {
         backgroundView.corners = [.topLeft, .topRight]
-        Theme.buttonStyle(doneButton, title: "Continue")
+        Theme.buttonStyle(doneButton, title: "Done")
         titleTextLabel.text = pickerType.title()
         pickerView.reloadAllComponents()
     }
@@ -130,7 +131,7 @@ final class DataPickerViewController: BaseViewController {
         // Создаем контент уведомления
         let content = UNMutableNotificationContent()
         content.title = "Plant Care Reminder"
-        content.body = "Time to water, mist, or fertilize your plant!"
+        content.body = "Time to water, cut, or new pot for your plant!"
         
         content.sound = .default
         
@@ -138,8 +139,7 @@ final class DataPickerViewController: BaseViewController {
         let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: date)
         let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true) // Установите повторение на true для ежедневных уведомлений
         
-        // Создаем запрос на уведомление с уникальным идентификатором
-        let request = UNNotificationRequest(identifier: "NotificationIdentifier", content: content, trigger: trigger)
+        let request = UNNotificationRequest(identifier: "PlantNotificationIdentifier", content: content, trigger: trigger)
         
         // Добавляем запрос в центр уведомлений
         center.add(request) { error in
@@ -226,7 +226,7 @@ extension DataPickerViewController: UIPickerViewDataSource, UIPickerViewDelegate
         }
         
         let attributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor(hexString: "#12AD5C")
+            .foregroundColor: UIColor(hexString: "#0A9E03")
         ]
         
         return NSAttributedString(string: title, attributes: attributes)

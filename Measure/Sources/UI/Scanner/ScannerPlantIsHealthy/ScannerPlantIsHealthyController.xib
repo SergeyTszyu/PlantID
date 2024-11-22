@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerPlantIsHealthyController" customModule="PlantID_App" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScannerPlantIsHealthyController" customModule="PlantNEW_App" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -20,22 +20,41 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="isHealthy" translatesAutoresizingMaskIntoConstraints="NO" id="WYk-WF-Rdu">
-                    <rect key="frame" x="24" y="83" width="345" height="711"/>
+                    <rect key="frame" x="76.666666666666686" y="167" width="240" height="240"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="AdE-Z3-FBg"/>
+                        <constraint firstAttribute="height" constant="240" id="Fya-TV-d7b"/>
+                    </constraints>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plant is healthy!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0h-bj-jfp">
+                    <rect key="frame" x="107.66666666666669" y="439" width="178" height="29"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" red="0.11372549019607843" green="0.23529411764705882" blue="0.16862745098039217" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Strelitzia is thriving. Keep up the good care!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QkO-lk-V6u">
+                    <rect key="frame" x="36" y="484" width="321" height="38.333333333333371"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <color key="textColor" red="0.65098039215686276" green="0.67843137254901964" blue="0.70196078431372544" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WYk-WF-Rdu" secondAttribute="trailing" constant="24" id="81N-qy-g0c"/>
-                <constraint firstItem="WYk-WF-Rdu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="9ht-dr-jWq"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WYk-WF-Rdu" secondAttribute="bottom" constant="24" id="fsH-rt-sf7"/>
-                <constraint firstItem="WYk-WF-Rdu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="yG0-yO-8wd"/>
+                <constraint firstItem="QkO-lk-V6u" firstAttribute="top" secondItem="G0h-bj-jfp" secondAttribute="bottom" constant="16" id="Hxy-du-dSd"/>
+                <constraint firstItem="QkO-lk-V6u" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="36" id="YIL-bQ-h2m"/>
+                <constraint firstItem="G0h-bj-jfp" firstAttribute="top" secondItem="WYk-WF-Rdu" secondAttribute="bottom" constant="32" id="gBl-dt-C0q"/>
+                <constraint firstItem="WYk-WF-Rdu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="hFz-tu-dwC"/>
+                <constraint firstAttribute="trailing" secondItem="QkO-lk-V6u" secondAttribute="trailing" constant="36" id="nEm-IU-aeA"/>
+                <constraint firstItem="G0h-bj-jfp" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="rqd-lQ-ZKe"/>
+                <constraint firstItem="WYk-WF-Rdu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="108" id="xwX-fM-Blu"/>
             </constraints>
             <point key="canvasLocation" x="76" y="20"/>
         </view>
     </objects>
     <resources>
-        <image name="isHealthy" width="327" height="617"/>
+        <image name="isHealthy" width="169" height="164"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

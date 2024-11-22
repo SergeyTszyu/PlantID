@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZTb-Fa-17u" customClass="CornerImageView" customModule="PlantNEW_App" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZTb-Fa-17u" customClass="CornerImageView" customModule="PlantNEW_App" customModuleProvider="target">
                         <rect key="frame" x="16" y="8" width="120" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="XvT-UG-DQ1"/>
@@ -77,6 +77,13 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="plantDescLabel" destination="IaG-xe-N4Q" id="3Qp-Q7-Kr7"/>
+                <outlet property="plantImageVIew" destination="ZTb-Fa-17u" id="Y5q-Wf-yak"/>
+                <outlet property="plantNameLabeel" destination="lJL-Zx-usG" id="aeU-vB-Std"/>
+                <outlet property="plantToxicImage" destination="ZAC-X2-fsl" id="u8v-GH-4lw"/>
+                <outlet property="plantToxicText" destination="leW-q2-tg0" id="Ljw-89-LQu"/>
+            </connections>
             <point key="canvasLocation" x="74.809160305343511" y="19.718309859154932"/>
         </tableViewCell>
     </objects>

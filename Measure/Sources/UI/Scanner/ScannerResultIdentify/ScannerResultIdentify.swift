@@ -18,15 +18,14 @@ class ScannerResultIdentify: BaseViewController {
     var image: UIImage!
     var scannerType: ScannerType = .identify
     
-    var plantToSaving: PlantIdentificationResponse!
+//    var plantToSaving: PlantIdentificationResponse!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         let backButton = UIBarButtonItem(image: UIImage(named: "chevron-left")!, style: .plain, target: self, action: #selector(backButtonTapped))
         navigationItem.leftBarButtonItem = backButton
-//        title = result.suggestions.first!.plantName
-
+        
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
         tableView.estimatedRowHeight = 300
@@ -89,12 +88,16 @@ extension ScannerResultIdentify: UITableViewDataSource {
             switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultHeaderCell", for: indexPath) as! ScannerResultHeaderCell
+                cell.fill(result, image: image)
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultFooterCell", for: indexPath) as! ScannerResultFooterCell
-                cell.fill("Main Information:", bottomText: "Strelitzia is a genus of five species of perennial flowering plants native to South Africa. Commonly known as the bird of paradise due to its exotic flowers resembling a bird in flight, Strelitzia belongs to the family Strelitziaceae. It is widely admired for its stunning appearance, making it a popular choice for both indoor and outdoor settings.")
+                cell.fill("Main Information:", bottomText: result.suggestions.first!.plantDetails?.wikiDescription?.value ?? "")
                 return cell
-            default: return UITableViewCell()
+            default:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultFooterCell", for: indexPath) as! ScannerResultFooterCell
+                cell.fill("Safety Note:", bottomText: result.suggestions.first!.plantDetails?.toxicity ?? "")
+                return cell
             }
         } else {
             switch indexPath.row {
@@ -112,7 +115,12 @@ extension ScannerResultIdentify: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if scannerType == .identify {
-            return 2
+            if let tx = result.suggestions.first!.plantDetails?.toxicity, tx.isEmpty {
+                return 2
+            } else {
+                return 3
+            }
+            
         } else {
             return 1
         }

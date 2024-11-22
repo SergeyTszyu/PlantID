@@ -35,7 +35,7 @@ final class PaywallViewController: BaseViewController {
         button.setImage(UIImage(named: "Close")!, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(skipPressed), for: .touchUpInside)
-        button.tintColor = UIColor(hexString: "#0A9E03")
+        button.tintColor = UIColor(hexString: "#FE8331")
         return button
     }()
     

@@ -163,21 +163,26 @@ class ScannerViewController: UIViewController,
         manager.onScanCompleted = { [weak self] response in
             if self!.scannerType == .identify {
                 let vc = ScannerResultIdentify()
+                vc.image = image
                 vc.result = response
-                self?.navigationController?.pushViewController(vc, animated: true)
+                DispatchQueue.main.async {
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
             } else {
                 
             }
         }
         manager.onScanIsHealthy = {
             DispatchQueue.main.async {
-                let vc = ScannerPlantIsHealthyController()
+                let vc = ScannerNotFoundViewController()
+                vc.ccannerResultType = .isHealthy
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
         manager.onScanNotFound = {
             DispatchQueue.main.async {
                 let vc = ScannerNotFoundViewController()
+                vc.ccannerResultType = .notFound
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
@@ -208,13 +213,15 @@ class ScannerViewController: UIViewController,
                 }
                 manager.onScanIsHealthy = {
                     DispatchQueue.main.async {
-                        let vc = ScannerPlantIsHealthyController()
+                        let vc = ScannerNotFoundViewController()
+                        vc.ccannerResultType = .isHealthy
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }
                 manager.onScanNotFound = {
                     DispatchQueue.main.async {
                         let vc = ScannerNotFoundViewController()
+                        vc.ccannerResultType = .notFound
                         self.navigationController?.pushViewController(vc, animated: true)
                     }
                 }

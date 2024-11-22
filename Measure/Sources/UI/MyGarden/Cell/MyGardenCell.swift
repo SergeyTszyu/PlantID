@@ -62,5 +62,6 @@ class MyGardenCell: UITableViewCell {
     func fill(_ object: PlantIdentificationResponse) {
         plantImageView.image = UIImage(data: object.localImageData!)
         plantNameLabel.text = object.suggestions.first?.plantName
+        plantDescLabel.text = object.suggestions.first!.plantDetails?.wikiDescription?.value ?? ""
     }
 }
