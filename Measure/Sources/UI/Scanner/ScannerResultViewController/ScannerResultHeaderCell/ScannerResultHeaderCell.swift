@@ -28,7 +28,7 @@ class ScannerResultHeaderCell: UITableViewCell {
     
     func fill(_ model: PlantIdentificationResponse, image: UIImage) {
         plantImageVIew.image = image
-        plantDescLabel.text = ""
+        plantDescLabel.text = "Exotic Elegance with Vibrant Blooms"
         plantNameLabeel.text = model.suggestions.first!.plantName
         if let tx = model.suggestions.first!.plantDetails?.toxicity, tx.isEmpty {
             plantToxicText.isHidden = true

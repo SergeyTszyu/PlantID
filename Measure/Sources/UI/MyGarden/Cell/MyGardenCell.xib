@@ -20,12 +20,17 @@
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Umf-TL-gQx" customClass="ShadowViewItem" customModule="PlantNEW_App" customModuleProvider="target">
                         <rect key="frame" x="16" y="18" width="288" height="102"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EuS-JV-kBO" customClass="CornerImageView" customModule="PlantNEW_App" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EuS-JV-kBO">
                                 <rect key="frame" x="16" y="19" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="AFA-BA-UE3"/>
                                     <constraint firstAttribute="width" constant="64" id="da1-hu-yde"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="32"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu1-3I-9jy">
                                 <rect key="frame" x="92" y="19" width="180" height="21"/>
@@ -70,7 +75,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="plantDescLabel" destination="Ztk-ay-xUx" id="Hy0-8e-Yqa"/>
-                <outlet property="plantImageView" destination="EuS-JV-kBO" id="ZFB-xH-D8c"/>
+                <outlet property="plantImageView" destination="EuS-JV-kBO" id="RfE-Ic-ZEW"/>
                 <outlet property="plantNameLabel" destination="vu1-3I-9jy" id="BSP-J4-JVW"/>
             </connections>
             <point key="canvasLocation" x="74.809160305343511" y="19.366197183098592"/>

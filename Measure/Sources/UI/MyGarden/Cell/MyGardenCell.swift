@@ -18,7 +18,7 @@ fileprivate struct Colors {
 
 class MyGardenCell: UITableViewCell {
     
-    @IBOutlet private weak var plantImageView: CornerImageView!
+    @IBOutlet private weak var plantImageView: UIImageView!
     @IBOutlet private weak var plantNameLabel: UILabel!
     @IBOutlet private weak var plantDescLabel: UILabel!
     
@@ -40,8 +40,9 @@ class MyGardenCell: UITableViewCell {
     }
     
     func configure() {
-        plantImageView.corners = [.topLeft, .topRight]
-    }
+        plantImageView.layer.borderWidth = 1
+        plantImageView.layer.borderColor = UIColor(hexString: "#0A9E03")!.cgColor
+     }
     
     @IBAction func removeAction(_ sender: UIButton) {
         delegate?.myGardenCellRemove(self)

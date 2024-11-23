@@ -22,19 +22,19 @@
                         <rect key="frame" x="16" y="18" width="288" height="96"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 Aug, 2024" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hK1-Lh-qRO">
-                                <rect key="frame" x="96" y="52" width="89.666666666666686" height="19"/>
+                                <rect key="frame" x="92" y="52" width="89.666666666666686" height="19"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.65098039215686276" green="0.67843137254901964" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hvq-7u-1mZ" customClass="CornerImageView" customModule="PlantNEW_App" customModuleProvider="target">
-                                <rect key="frame" x="20" y="16" width="64" height="64"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hvq-7u-1mZ">
+                                <rect key="frame" x="16" y="16" width="64" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="OhV-rM-yC8"/>
                                     <constraint firstAttribute="height" constant="64" id="tPQ-qn-eTc"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layyer.borderWidth">
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
                                         <integer key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
@@ -43,7 +43,7 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.10.2010" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RrJ-yf-Yri">
-                                <rect key="frame" x="96" y="25" width="176" height="21.666666666666671"/>
+                                <rect key="frame" x="92" y="25" width="180" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                 <color key="textColor" red="0.11372549019607843" green="0.23529411764705882" blue="0.16862745098039217" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="hK1-Lh-qRO" firstAttribute="bottom" secondItem="Hvq-7u-1mZ" secondAttribute="bottom" constant="-9" id="R8a-Yw-uEa"/>
                             <constraint firstItem="Hvq-7u-1mZ" firstAttribute="centerY" secondItem="ATx-8h-dBL" secondAttribute="centerY" id="Vdx-67-lQh"/>
                             <constraint firstItem="KqC-hv-L9T" firstAttribute="centerY" secondItem="ATx-8h-dBL" secondAttribute="centerY" id="ZOa-6N-Kca"/>
-                            <constraint firstItem="Hvq-7u-1mZ" firstAttribute="leading" secondItem="ATx-8h-dBL" secondAttribute="leading" constant="20" id="aid-4b-2FW"/>
+                            <constraint firstItem="Hvq-7u-1mZ" firstAttribute="leading" secondItem="ATx-8h-dBL" secondAttribute="leading" constant="16" id="aid-4b-2FW"/>
                             <constraint firstAttribute="trailing" secondItem="KqC-hv-L9T" secondAttribute="trailing" constant="26" id="emz-8X-PcL"/>
                             <constraint firstItem="RrJ-yf-Yri" firstAttribute="top" secondItem="Hvq-7u-1mZ" secondAttribute="top" constant="9" id="hM8-UG-WDo"/>
                             <constraint firstItem="RrJ-yf-Yri" firstAttribute="leading" secondItem="Hvq-7u-1mZ" secondAttribute="trailing" constant="12" id="niB-8d-2Nq"/>

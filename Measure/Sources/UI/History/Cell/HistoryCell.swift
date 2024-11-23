@@ -67,7 +67,7 @@ final class HistoryCell: UITableViewCell {
 private extension HistoryCell {
     
     func configure() {
-        historyImageView.layer.cornerRadius = 4
+        historyImageView.layer.cornerRadius = 32
         historyImageView.contentMode = .scaleAspectFill
         
         historyContentView.layer.cornerRadius = 16

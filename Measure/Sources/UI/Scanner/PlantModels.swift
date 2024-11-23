@@ -187,6 +187,9 @@ class PlantIdentificationResponse: Object, Decodable {
     @Persisted var scanDate: Date?
     
     @Persisted var wateringDate: Date? = nil
+    @Persisted var potDate: Date? = nil
+    @Persisted var cutDate: Date? = nil
+    
     @Persisted var sprayingDate: Date? = nil
     @Persisted var fertilizeDate: Date? = nil
     

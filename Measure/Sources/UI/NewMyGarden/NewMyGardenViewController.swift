@@ -134,7 +134,7 @@ final class NewMyGardenViewController: BaseViewController {
     }
     
     func updateEmptyStateVisibility() {
-        let shouldShowEmptyState = false
+        let shouldShowEmptyState = isEmpty
         
         emptyImageView.isHidden = !shouldShowEmptyState
         emptyTopLabel.isHidden = !shouldShowEmptyState
@@ -182,8 +182,6 @@ final class NewMyGardenViewController: BaseViewController {
         nav.modalPresentationStyle = .overFullScreen
         nav.modalTransitionStyle = .crossDissolve
         self.present(nav, animated: true)
-//        let vc = OpenPlantViewController()
-//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
 
@@ -192,12 +190,16 @@ final class NewMyGardenViewController: BaseViewController {
 extension NewMyGardenViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let obj = plantResponses?[indexPath.row] {
-//            let vc = ScannerResultViewController()
-//            vc.result = obj
-//            vc.scannerType = .identify
-//            vc.image = UIImage(data: obj.localImageData!)
-//            self.navigationController?.pushViewController(vc, animated: true)
+        if contentType == .myGarden {
+            if let obj = plantResponses?[indexPath.row] {
+                let vc = OpenPlantViewController()
+                vc.plant = obj
+//                vc.configure()
+//                vc.fill()
+                self.navigationController?.pushViewController(vc, animated: true)
+            }
+        } else {
+            
         }
     }
     
