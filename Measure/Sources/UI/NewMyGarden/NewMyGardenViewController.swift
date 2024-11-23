@@ -100,7 +100,6 @@ final class NewMyGardenViewController: BaseViewController {
         super.viewWillAppear(animated)
         
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        
         fetchPlantIdentificationResponses()
     }
     
@@ -194,8 +193,6 @@ extension NewMyGardenViewController: UITableViewDelegate {
             if let obj = plantResponses?[indexPath.row] {
                 let vc = OpenPlantViewController()
                 vc.plant = obj
-//                vc.configure()
-//                vc.fill()
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         } else {

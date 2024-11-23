@@ -14,6 +14,7 @@ final class OpenPlantViewController: BaseViewController {
     @IBOutlet private var topTitles: [UILabel]!
     @IBOutlet private var bottomTitles: [UILabel]!
     @IBOutlet private var careButtons: [UIButton]!
+    @IBOutlet private weak var menuButton: UIButton!
     
     // MARK: -
     
@@ -34,7 +35,13 @@ final class OpenPlantViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+//        setupMenuInteraction()
     }
+    
+//    private func setupMenuInteraction() {
+//        let interaction = UIContextMenuInteraction(delegate: self)
+//        menuButton.addInteraction(interaction)
+//    }
     
     func configure() {
         images[0].image = UIImage(named: "Detail-Water")!
@@ -50,6 +57,9 @@ final class OpenPlantViewController: BaseViewController {
             topImageView.image = UIImage(named: "Placeholder")
         }
         
+        let currentDate = Date()
+        let calendar = Calendar.current
+        
         if let firstSuggestion = plant.suggestions.first {
             plantTitleLabel.text = firstSuggestion.plantName
             plantDescLabel.text = firstSuggestion.plantDetails?.wikiDescription?.value ?? "Description not available"
@@ -61,6 +71,22 @@ final class OpenPlantViewController: BaseViewController {
         if let wDate = plant.wateringDate {
             careButtons[0].backgroundColor = UIColor(hexString: "#FE8331")
             
+            let components = calendar.dateComponents([.day], from: currentDate, to: wDate)
+            let daysDifference = components.day ?? 0
+            if daysDifference == 0 {
+                bottomTitles[0].text = "Today"
+                wateringDateOverdue = true
+            } else if daysDifference < 0 {
+                bottomTitles[0].text = "\(-daysDifference) days overdue"
+                wateringDateOverdue = true
+            } else {
+                bottomTitles[0].text = "in \(daysDifference) days"
+                wateringDateOverdue = false
+            }
+            if daysDifference <= 0 {
+                bottomTitles[0].layer.borderColor = UIColor(hexString: "#ED675E")!.cgColor
+            }
+            
         } else {
             careButtons[0].backgroundColor = UIColor(hexString: "#CFCFCF")
             bottomTitles[0].text = "No plan"
@@ -69,6 +95,23 @@ final class OpenPlantViewController: BaseViewController {
         
         if let pot = plant.potDate {
             careButtons[1].backgroundColor = UIColor(hexString: "#FE8331")
+            
+            let components = calendar.dateComponents([.day], from: currentDate, to: pot)
+            let daysDifference = components.day ?? 0
+            if daysDifference == 0 {
+                bottomTitles[1].text = "Today"
+                wateringDateOverdue = true
+            } else if daysDifference < 0 {
+                bottomTitles[1].text = "\(-daysDifference) days overdue"
+                wateringDateOverdue = true
+            } else {
+                bottomTitles[1].text = "in \(daysDifference) days"
+                wateringDateOverdue = false
+            }
+            if daysDifference <= 0 {
+                bottomTitles[1].layer.borderColor = UIColor(hexString: "#ED675E")!.cgColor
+            }
+            
         } else {
             careButtons[1].backgroundColor = UIColor(hexString: "#CFCFCF")
             bottomTitles[1].text = "No plan"
@@ -77,6 +120,23 @@ final class OpenPlantViewController: BaseViewController {
         
         if let cut = plant.cutDate {
             careButtons[2].backgroundColor = UIColor(hexString: "#FE8331")
+            
+            let components = calendar.dateComponents([.day], from: currentDate, to: cut)
+            let daysDifference = components.day ?? 0
+            if daysDifference == 0 {
+                bottomTitles[2].text = "Today"
+                wateringDateOverdue = true
+            } else if daysDifference < 0 {
+                bottomTitles[2].text = "\(-daysDifference) days overdue"
+                wateringDateOverdue = true
+            } else {
+                bottomTitles[2].text = "in \(daysDifference) days"
+                wateringDateOverdue = false
+            }
+            if daysDifference <= 0 {
+                bottomTitles[2].layer.borderColor = UIColor(hexString: "#ED675E")!.cgColor
+            }
+            
         } else {
             careButtons[2].backgroundColor = UIColor(hexString: "#CFCFCF")
             bottomTitles[2].text = "No plan"
@@ -89,7 +149,17 @@ final class OpenPlantViewController: BaseViewController {
     }
     
     @IBAction func menuAction(_ sender: UIButton) {
-        self.navigationController?.popToRootViewController(animated: true)
+        let menu = UIMenu(title: "", children: [
+              UIAction(title: "Edit", image: UIImage(systemName: "pencil"), handler: { _ in
+                  self.editPlant()
+              }),
+              UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { _ in
+                  self.deletePlant()
+              })
+          ])
+          
+          sender.showsMenuAsPrimaryAction = true
+          sender.menu = menu
     }
 
     @IBAction func waterAction(_ sender: UIButton) {
@@ -102,5 +172,53 @@ final class OpenPlantViewController: BaseViewController {
     
     @IBAction func cutAction(_ sender: UIButton) {
         
+    }
+}
+
+extension OpenPlantViewController: UIContextMenuInteractionDelegate {
+    
+    func contextMenuInteraction(
+        _ interaction: UIContextMenuInteraction,
+        configurationForMenuAtLocation location: CGPoint
+    ) -> UIContextMenuConfiguration? {
+        
+        return UIContextMenuConfiguration(identifier: nil, previewProvider: nil) { _ in
+            return UIMenu(title: "", children: [
+                UIAction(title: "Edit", image: UIImage(systemName: "pencil"), handler: { _ in
+                    self.editPlant()
+                }),
+                UIAction(title: "Delete", image: UIImage(systemName: "trash"), attributes: .destructive, handler: { _ in
+                    self.deletePlant()
+                })
+            ])
+        }
+    }
+    
+    private func editPlant() {
+        let editPlantViewController = EditPlantViewController()
+        self.navigationController?.pushViewController(editPlantViewController, animated: true)
+    }
+    
+    private func deletePlant() {
+        let vc = MyGardenRemoveViewController()
+        vc.delegate = self
+        vc.modalPresentationStyle = .overFullScreen
+        vc.modalTransitionStyle = .crossDissolve
+        self.present(vc, animated: true)
+    }
+    
+}
+
+extension OpenPlantViewController: MyGardenRemoveViewControllerDelegate {
+    
+    func myGardenRemoveViewControllerDelet(_ controller: MyGardenRemoveViewController) {
+        do {
+            try mainRealm.write {
+                mainRealm.delete(plant)
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        } catch {
+            print("Error deleting plant: \(error.localizedDescription)")
+        }
     }
 }

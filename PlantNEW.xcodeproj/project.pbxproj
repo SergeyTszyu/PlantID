@@ -19,6 +19,10 @@
 		BB11E60C2BB7266000C3D16B /* SCNSphere+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6052BB7266000C3D16B /* SCNSphere+Init.swift */; };
 		BB12DFFF2CEFEBED002CC421 /* Onboarding2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */; };
 		BB12E0002CEFEBED002CC421 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */; };
+		BB12E0212CF197D6002CC421 /* EditPlantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB12E0202CF197D6002CC421 /* EditPlantViewController.xib */; };
+		BB12E0222CF197D6002CC421 /* EditPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB12E01F2CF197D6002CC421 /* EditPlantViewController.swift */; };
+		BB12E0262CF19868002CC421 /* EditPlantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB12E0252CF19868002CC421 /* EditPlantCell.xib */; };
+		BB12E0272CF19868002CC421 /* EditPlantCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB12E0242CF19868002CC421 /* EditPlantCell.swift */; };
 		BB19E0AE2C85478A009CED7D /* SettingsSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19E0AC2C85478A009CED7D /* SettingsSwitchCell.swift */; };
 		BB19E0AF2C85478A009CED7D /* SettingsSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB19E0AD2C85478A009CED7D /* SettingsSwitchCell.xib */; };
 		BB19E0B22C8549A4009CED7D /* SettingsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB19E0B02C8549A4009CED7D /* SettingsListCell.swift */; };
@@ -188,6 +192,10 @@
 		BB11E6052BB7266000C3D16B /* SCNSphere+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNSphere+Init.swift"; sourceTree = "<group>"; };
 		BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
 		BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding2ViewController.xib; sourceTree = "<group>"; };
+		BB12E01F2CF197D6002CC421 /* EditPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantViewController.swift; sourceTree = "<group>"; };
+		BB12E0202CF197D6002CC421 /* EditPlantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPlantViewController.xib; sourceTree = "<group>"; };
+		BB12E0242CF19868002CC421 /* EditPlantCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantCell.swift; sourceTree = "<group>"; };
+		BB12E0252CF19868002CC421 /* EditPlantCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditPlantCell.xib; sourceTree = "<group>"; };
 		BB19E0AC2C85478A009CED7D /* SettingsSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchCell.swift; sourceTree = "<group>"; };
 		BB19E0AD2C85478A009CED7D /* SettingsSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsSwitchCell.xib; sourceTree = "<group>"; };
 		BB19E0B02C8549A4009CED7D /* SettingsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsListCell.swift; sourceTree = "<group>"; };
@@ -378,6 +386,25 @@
 				BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */,
 			);
 			path = Onboarding2;
+			sourceTree = "<group>";
+		};
+		BB12E01E2CF197BF002CC421 /* EditPlant */ = {
+			isa = PBXGroup;
+			children = (
+				BB12E0232CF1984A002CC421 /* EditPlantCell */,
+				BB12E01F2CF197D6002CC421 /* EditPlantViewController.swift */,
+				BB12E0202CF197D6002CC421 /* EditPlantViewController.xib */,
+			);
+			path = EditPlant;
+			sourceTree = "<group>";
+		};
+		BB12E0232CF1984A002CC421 /* EditPlantCell */ = {
+			isa = PBXGroup;
+			children = (
+				BB12E0242CF19868002CC421 /* EditPlantCell.swift */,
+				BB12E0252CF19868002CC421 /* EditPlantCell.xib */,
+			);
+			path = EditPlantCell;
 			sourceTree = "<group>";
 		};
 		BB19E0B62C859349009CED7D /* Cell */ = {
@@ -913,6 +940,7 @@
 		FAEF718F2B4659E4000C232A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BB12E01E2CF197BF002CC421 /* EditPlant */,
 				BB4164452CECDC4600D3281E /* Chat */,
 				BBC9EEE72CEA301400B48FD8 /* OpenPlant */,
 				BB1E12522CDB7AFC0042E80D /* NewMyGarden */,
@@ -1100,6 +1128,8 @@
 				FAC3542B2B47C7B300C473C5 /* SFProDisplay-ThinItalic.ttf in Resources */,
 				BB4164522CEFB92C00D3281E /* Onboarding1ViewController.xib in Resources */,
 				FAC354292B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf in Resources */,
+				BB12E0212CF197D6002CC421 /* EditPlantViewController.xib in Resources */,
+				BB12E0262CF19868002CC421 /* EditPlantCell.xib in Resources */,
 				BBC9EEEA2CEA302C00B48FD8 /* OpenPlantViewController.xib in Resources */,
 				BBC0D7422C8A7A3800BBBEB9 /* ScannerScanningViewController.xib in Resources */,
 				BB83E0CF2CDE755200FAC3A0 /* ScannerResultIdentify.xib in Resources */,
@@ -1164,6 +1194,7 @@
 				FAD536B92B4BA3AE009C57EE /* MainViewController+Extensions.swift in Sources */,
 				BB11E6072BB7266000C3D16B /* AreaViewController.swift in Sources */,
 				FAC3543D2B4915D500C473C5 /* ChildView.swift in Sources */,
+				BB12E0272CF19868002CC421 /* EditPlantCell.swift in Sources */,
 				BB28F41E2C1B687F004A0519 /* HistoryDetailViewController.swift in Sources */,
 				FAC354362B482ECE00C473C5 /* PaywallViewModel.swift in Sources */,
 				FA7183BD2C7BAD4A0068974B /* History.xcdatamodeld in Sources */,
@@ -1175,6 +1206,7 @@
 				FAC3541E2B468D6A00C473C5 /* OnboardingItems.swift in Sources */,
 				BB5B17202C87F36500E0769D /* MyGardenRemoveViewController.swift in Sources */,
 				FAD536C72B4D1CBF009C57EE /* SettingsCoordinator.swift in Sources */,
+				BB12E0222CF197D6002CC421 /* EditPlantViewController.swift in Sources */,
 				FA6E507B2B4FA0BF0041B7EC /* SettingsHeader.swift in Sources */,
 				FAD536BB2B4BA634009C57EE /* MainViewItems.swift in Sources */,
 				BB5B172F2C88869500E0769D /* DataPickerViewController.swift in Sources */,

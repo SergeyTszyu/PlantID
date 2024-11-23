@@ -5,7 +5,7 @@
 import UIKit
 
 @objc protocol MyGardenRemoveViewControllerDelegate: AnyObject {
-    func myGardenRemoveViewControllerDelet(_ controller: MyGardenRemoveViewController, at indexPath: IndexPath)
+    func myGardenRemoveViewControllerDelet(_ controller: MyGardenRemoveViewController)
 }
 
 class MyGardenRemoveViewController: BaseViewController {
@@ -14,7 +14,6 @@ class MyGardenRemoveViewController: BaseViewController {
     @IBOutlet private weak var deleteButton: UIButton!
     
     weak var delegate: MyGardenRemoveViewControllerDelegate?
-    var indexPath: IndexPath!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +35,7 @@ class MyGardenRemoveViewController: BaseViewController {
     
     @IBAction func deleteAction() {
         self.dismiss(animated: true)
-        delegate?.myGardenRemoveViewControllerDelet(self, at: indexPath)
+        delegate?.myGardenRemoveViewControllerDelet(self)
     }
     
     @IBAction func closeAction() {

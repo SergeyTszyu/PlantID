@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditPlantViewController" customModule="PlantNEW_App" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="rQr-GY-Msb" id="45o-oK-eC8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rQr-GY-Msb">
+                    <rect key="frame" x="0.0" y="119" width="393" height="601"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="f7a-IF-W9E"/>
+                        <outlet property="delegate" destination="-1" id="Bbd-iI-vp2"/>
+                    </connections>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVJ-dU-l2q">
+                    <rect key="frame" x="16" y="736" width="361" height="50"/>
+                    <color key="backgroundColor" red="0.039215686270000001" green="0.61960784310000006" blue="0.01176470588" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="IGx-3j-5S8"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
+                    <state key="normal" title="Save changes">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="save" destination="-1" eventType="touchUpInside" id="kno-DK-69X"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cif-ae-iSc">
+                    <rect key="frame" x="16" y="59" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Etp-MG-2DJ"/>
+                        <constraint firstAttribute="width" constant="44" id="Yya-x5-HTj"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" image="Backk"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WVJ-dU-l2q" secondAttribute="trailing" constant="16" id="EX8-OM-l1e"/>
+                <constraint firstItem="rQr-GY-Msb" firstAttribute="top" secondItem="cif-ae-iSc" secondAttribute="bottom" constant="16" id="QiS-UP-lpv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="rQr-GY-Msb" secondAttribute="trailing" id="UTB-IF-mJB"/>
+                <constraint firstItem="rQr-GY-Msb" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="dLR-GH-26h"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WVJ-dU-l2q" secondAttribute="bottom" constant="32" id="h8n-f2-isc"/>
+                <constraint firstItem="WVJ-dU-l2q" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="ne4-hL-jtc"/>
+                <constraint firstItem="cif-ae-iSc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="q5z-N5-xaP"/>
+                <constraint firstItem="cif-ae-iSc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="sXs-hL-WYY"/>
+                <constraint firstItem="WVJ-dU-l2q" firstAttribute="top" secondItem="rQr-GY-Msb" secondAttribute="bottom" constant="16" id="yt2-7B-VRO"/>
+            </constraints>
+            <point key="canvasLocation" x="78.625954198473281" y="20.422535211267608"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Backk" width="44" height="44"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OpenPlantViewController" customModule="PlantNEW_App" customModuleProvider="target">
             <connections>
+                <outlet property="menuButton" destination="Db5-mf-5RK" id="l8g-TU-eKe"/>
                 <outlet property="plantDescLabel" destination="O8z-Wx-kb1" id="QQ1-e0-S7J"/>
                 <outlet property="plantTitleLabel" destination="Pwi-UH-u1F" id="fWn-Nj-z85"/>
                 <outlet property="topImageView" destination="lqk-I2-zLM" id="P3s-6w-Qy7"/>

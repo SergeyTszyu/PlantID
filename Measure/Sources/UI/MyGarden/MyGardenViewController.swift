@@ -210,22 +210,21 @@ extension MyGardenViewController: UITableViewDataSource {
 
 extension MyGardenViewController: MyGardenRemoveViewControllerDelegate {
     
-    func myGardenRemoveViewControllerDelet(_ controller: MyGardenRemoveViewController, at indexPath: IndexPath) {
-        guard let plantToDelete = plantResponses?[indexPath.row] else {
-            return
-        }        
-        do {
-            try mainRealm.write {
-                mainRealm.delete(plantToDelete)
-            }
-            myGardenTableView.deleteRows(at: [indexPath], with: .automatic)
-        } catch {
-            print("Error deleting plant: \(error.localizedDescription)")
-        }
-        isEmpty = plantResponses?.isEmpty ?? true
+    func myGardenRemoveViewControllerDelet(_ controller: MyGardenRemoveViewController) {
+//        guard let plantToDelete = plantResponses?[indexPath.row] else {
+//            return
+//        }        
+//        do {
+//            try mainRealm.write {
+//                mainRealm.delete(plantToDelete)
+//            }
+//            myGardenTableView.deleteRows(at: [indexPath], with: .automatic)
+//        } catch {
+//            print("Error deleting plant: \(error.localizedDescription)")
+//        }
+//        isEmpty = plantResponses?.isEmpty ?? true
     }
 }
-
 
 // MARK: - MyGardenCellDelegate
 
@@ -234,7 +233,6 @@ extension MyGardenViewController: MyGardenCellDelegate {
     func myGardenCellRemove(_ myGardenCell: MyGardenCell) {
         let vc = MyGardenRemoveViewController()
         vc.delegate = self
-        vc.indexPath = myGardenTableView.indexPath(for: myGardenCell)
         vc.modalPresentationStyle = .overFullScreen
         vc.modalTransitionStyle = .crossDissolve
         self.present(vc, animated: true)
