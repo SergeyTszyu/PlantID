@@ -11,10 +11,10 @@ workflows:
             # https://appstoreconnect.apple.com/access/api
          # - certificate_credentials # <-- (CERTIFICATE_PRIVATE_KEY - Put your Certificate Private Key here) - app_store_credentials # <-- (APP_STORE_CONNECT_ISSUER_ID, APP_STORE_CONNECT_KEY_IDENTIFIER, APP_STORE_CONNECT_PRIVATE_KEY)
         vars:
-          XCODE_PROJECT: "PlantID.xcodeproj" # <-- Put the name of your workspace here.
-          XCODE_SCHEME: "PlantID" # <-- Put the name of your scheme here.
-          BUNDLE_ID: "com.plant.Kuyman" # <-- Put your Bundle Id here.
-          APP_STORE_APP_ID: 6670615404 # <-- Put the app id number here. This is found in App Store Connect > App > General > App Information
+          XCODE_PROJECT: "PlantNEW.xcodeproj" # <-- Put the name of your workspace here.
+          XCODE_SCHEME: "PlantNEW" # <-- Put the name of your scheme here.
+          BUNDLE_ID: "com.plantid.cakir " # <-- Put your Bundle Id here.
+          APP_STORE_APP_ID: 6738144361 # <-- Put the app id number here. This is found in App Store Connect > App > General > App Information
         xcode: latest
       scripts:
         - name: Test echo

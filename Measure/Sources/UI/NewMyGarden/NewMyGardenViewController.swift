@@ -94,6 +94,11 @@ final class NewMyGardenViewController: BaseViewController {
         super.viewDidLoad()
         
         configure()
+        NotificationCenter.default.addObserver(self, selector: #selector(updateGarden), name: Notification.Name("GardenUpdated"), object: nil)
+    }
+    
+    @objc func updateGarden() {
+        fetchPlantIdentificationResponses()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -122,7 +127,10 @@ final class NewMyGardenViewController: BaseViewController {
         let realm = try! Realm()
         historyData = realm.objects(ScanHistoryRealm.self).sorted(byKeyPath: "scanDate", ascending: false)
         myGardenTableView.reloadData()
-        updateEmptyStateVisibility()
+        emptyImageView.isHidden = true
+        emptyTopLabel.isHidden = true
+        emptyBottomLabel.isHidden = true
+        myGardenTableView.isHidden = false
     }
     
     private func fetchPlantIdentificationResponses() {
@@ -251,5 +259,10 @@ extension NewMyGardenViewController: TabsControlDelegate {
     func tabsControl(_ tabsControl: TabsControl, didSelectTabAtIndex index: Int) {
         let type = GardenContentType(rawValue: index)!
         self.contentType = type
+        if contentType == .history {
+            fetchData()
+        } else {
+            fetchPlantIdentificationResponses()
+        }
     }
 }

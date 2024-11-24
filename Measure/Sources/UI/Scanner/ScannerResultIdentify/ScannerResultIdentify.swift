@@ -62,6 +62,7 @@ class ScannerResultIdentify: BaseViewController {
             return
         }
         saveToDatabase(result)
+        NotificationCenter.default.post(name: Notification.Name("GardenUpdated"), object: nil)
         navigationController?.popToRootViewController(animated: true)
         tabBarController?.selectedIndex = 0
     }
