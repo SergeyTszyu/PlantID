@@ -216,6 +216,14 @@ final class OnboardingViewController: BaseViewController, UIPageViewControllerDe
         let nextPage = pages[currentIndex]
         pageViewController.setViewControllers([nextPage], direction: .forward, animated: true, completion: nil)
         
+        if nextPage is OnboardingReviewViewController {
+            if let scene = UIApplication.shared.connectedScenes.first(where: { $0.activationState == .foregroundActive }) as? UIWindowScene {
+                DispatchQueue.main.async {
+                    SKStoreReviewController.requestReview(in: scene)
+                }
+            }
+         }
+        
         setupContinueButton()
     }
 
