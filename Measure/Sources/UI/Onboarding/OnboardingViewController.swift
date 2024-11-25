@@ -48,12 +48,12 @@ final class OnboardingViewController: BaseViewController, UIPageViewControllerDe
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
         let restoreButton = createBottomButton(withTitle: "Restore Purchases", action: #selector(restoreTapped))
-        let privacyButton = createBottomButton(withTitle: "Terms of Use", action: #selector(privacyTapped))
-        let termsButton = createBottomButton(withTitle: "Privacy Policy", action: #selector(termsTapped))
-        
-        stackView.addArrangedSubview(restoreButton)
-        stackView.addArrangedSubview(termsButton)
+        let termsButton = createBottomButton(withTitle: "Terms of Use", action: #selector(privacyTapped))
+        let privacyButton = createBottomButton(withTitle: "Privacy Policy", action: #selector(termsTapped))
+
         stackView.addArrangedSubview(privacyButton)
+        stackView.addArrangedSubview(termsButton)
+        stackView.addArrangedSubview(restoreButton)
         
         return stackView
     }()

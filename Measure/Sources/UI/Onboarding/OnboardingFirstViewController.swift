@@ -72,12 +72,12 @@ final class OnboardingFirstViewController: BaseViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
 
         let restoreButton = createBottomButton(withTitle: "Restore Purchases", action: #selector(restoreTapped))
-        let privacyButton = createBottomButton(withTitle: "Terms of Use", action: #selector(privacyTapped))
-        let termsButton = createBottomButton(withTitle: "Privacy Policy", action: #selector(termsTapped))
+        let termsButton = createBottomButton(withTitle: "Terms of Use", action: #selector(privacyTapped))
+        let privacyButton = createBottomButton(withTitle: "Privacy Policy", action: #selector(termsTapped))
 
+        stackView.addArrangedSubview(privacyButton)
         stackView.addArrangedSubview(termsButton)
         stackView.addArrangedSubview(restoreButton)
-        stackView.addArrangedSubview(privacyButton)
 
         return stackView
     }()
