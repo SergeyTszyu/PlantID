@@ -126,11 +126,9 @@ final class NewMyGardenViewController: BaseViewController {
     func fetchData() {
         let realm = try! Realm()
         historyData = realm.objects(ScanHistoryRealm.self).sorted(byKeyPath: "scanDate", ascending: false)
+        isEmpty = historyData?.isEmpty ?? true
         myGardenTableView.reloadData()
-        emptyImageView.isHidden = true
-        emptyTopLabel.isHidden = true
-        emptyBottomLabel.isHidden = true
-        myGardenTableView.isHidden = false
+        updateEmptyStateVisibility()
     }
     
     private func fetchPlantIdentificationResponses() {
@@ -147,6 +145,15 @@ final class NewMyGardenViewController: BaseViewController {
         emptyTopLabel.isHidden = !shouldShowEmptyState
         emptyBottomLabel.isHidden = !shouldShowEmptyState
         myGardenTableView.isHidden = shouldShowEmptyState
+        
+        switch contentType {
+        case .myGarden:
+            emptyTopLabel.text = "Your garden is empty"
+            emptyBottomLabel.text = "Add your first plant to growing your garden"
+        case .history:
+            emptyTopLabel.text = "Your history is empty"
+            emptyBottomLabel.text = "Scan your first plant to start building your history!"
+        }
     }
     
     func setupConstraints() {
