@@ -84,6 +84,15 @@
 		BBC9EEC92CE86B7A00B48FD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBC9EEC72CE86B7A00B48FD8 /* Localizable.strings */; };
 		BBC9EEEA2CEA302C00B48FD8 /* OpenPlantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */; };
 		BBC9EEEB2CEA302C00B48FD8 /* OpenPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EEE82CEA302C00B48FD8 /* OpenPlantViewController.swift */; };
+		BBCC6F952CF67EA5001C90A4 /* ScannerAnalyzerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F942CF67EA5001C90A4 /* ScannerAnalyzerViewController.xib */; };
+		BBCC6F962CF67EA5001C90A4 /* ScannerAnalyzerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBCC6F932CF67EA5001C90A4 /* ScannerAnalyzerViewController.swift */; };
+		BBCC6F982CF680AC001C90A4 /* AnimationScan.json in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F972CF680AC001C90A4 /* AnimationScan.json */; };
+		BBCC6FA02CF684BC001C90A4 /* Localizable_FR.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F9B2CF684BC001C90A4 /* Localizable_FR.strings */; };
+		BBCC6FA12CF684BC001C90A4 /* Localizable_NL.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F9E2CF684BC001C90A4 /* Localizable_NL.strings */; };
+		BBCC6FA22CF684BC001C90A4 /* Localizable_ESP.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F9A2CF684BC001C90A4 /* Localizable_ESP.strings */; };
+		BBCC6FA32CF684BC001C90A4 /* Localizable_UK.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F9F2CF684BC001C90A4 /* Localizable_UK.strings */; };
+		BBCC6FA42CF684BC001C90A4 /* Localizable_GE.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F9C2CF684BC001C90A4 /* Localizable_GE.strings */; };
+		BBCC6FA52CF684BC001C90A4 /* Localizable_IT.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBCC6F9D2CF684BC001C90A4 /* Localizable_IT.strings */; };
 		BBD4077D2C9B393D00FECBD3 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = BBBFF9342C985D1400737C36 /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		BBD9B4002C8AADCE00E138E6 /* ScannerNotFoundViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD9B3FF2C8AADCE00E138E6 /* ScannerNotFoundViewController.xib */; };
 		BBD9B4012C8AADCE00E138E6 /* ScannerNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9B3FE2C8AADCE00E138E6 /* ScannerNotFoundViewController.swift */; };
@@ -253,6 +262,15 @@
 		BBC9EEC82CE86B7A00B48FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBC9EEE82CEA302C00B48FD8 /* OpenPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPlantViewController.swift; sourceTree = "<group>"; };
 		BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenPlantViewController.xib; sourceTree = "<group>"; };
+		BBCC6F932CF67EA5001C90A4 /* ScannerAnalyzerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerAnalyzerViewController.swift; sourceTree = "<group>"; };
+		BBCC6F942CF67EA5001C90A4 /* ScannerAnalyzerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerAnalyzerViewController.xib; sourceTree = "<group>"; };
+		BBCC6F972CF680AC001C90A4 /* AnimationScan.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = AnimationScan.json; sourceTree = "<group>"; };
+		BBCC6F9A2CF684BC001C90A4 /* Localizable_ESP.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable_ESP.strings; sourceTree = "<group>"; };
+		BBCC6F9B2CF684BC001C90A4 /* Localizable_FR.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable_FR.strings; sourceTree = "<group>"; };
+		BBCC6F9C2CF684BC001C90A4 /* Localizable_GE.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable_GE.strings; sourceTree = "<group>"; };
+		BBCC6F9D2CF684BC001C90A4 /* Localizable_IT.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable_IT.strings; sourceTree = "<group>"; };
+		BBCC6F9E2CF684BC001C90A4 /* Localizable_NL.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable_NL.strings; sourceTree = "<group>"; };
+		BBCC6F9F2CF684BC001C90A4 /* Localizable_UK.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable_UK.strings; sourceTree = "<group>"; };
 		BBD9B3FE2C8AADCE00E138E6 /* ScannerNotFoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerNotFoundViewController.swift; sourceTree = "<group>"; };
 		BBD9B3FF2C8AADCE00E138E6 /* ScannerNotFoundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerNotFoundViewController.xib; sourceTree = "<group>"; };
 		BBD9B40B2C8BE56900E138E6 /* ScannerPlantIsHealthyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPlantIsHealthyController.swift; sourceTree = "<group>"; };
@@ -582,6 +600,7 @@
 		BBA4C37A2C81CCDB0092D8FF /* Scanner */ = {
 			isa = PBXGroup;
 			children = (
+				BBCC6F922CF67E87001C90A4 /* ScannerAnalyzer */,
 				BB83E0CB2CDE753200FAC3A0 /* ScannerResultIdentify */,
 				BBD9B4082C8BE4F700E138E6 /* ScannerPlantIsHealthy */,
 				BBD9B3FD2C8AADB700E138E6 /* ScannrNotFoundViewController */,
@@ -621,6 +640,28 @@
 				BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */,
 			);
 			path = OpenPlant;
+			sourceTree = "<group>";
+		};
+		BBCC6F922CF67E87001C90A4 /* ScannerAnalyzer */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC6F932CF67EA5001C90A4 /* ScannerAnalyzerViewController.swift */,
+				BBCC6F942CF67EA5001C90A4 /* ScannerAnalyzerViewController.xib */,
+			);
+			path = ScannerAnalyzer;
+			sourceTree = "<group>";
+		};
+		BBCC6F992CF684AD001C90A4 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				BBCC6F9A2CF684BC001C90A4 /* Localizable_ESP.strings */,
+				BBCC6F9B2CF684BC001C90A4 /* Localizable_FR.strings */,
+				BBCC6F9C2CF684BC001C90A4 /* Localizable_GE.strings */,
+				BBCC6F9D2CF684BC001C90A4 /* Localizable_IT.strings */,
+				BBCC6F9E2CF684BC001C90A4 /* Localizable_NL.strings */,
+				BBCC6F9F2CF684BC001C90A4 /* Localizable_UK.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		BBD9B3FD2C8AADB700E138E6 /* ScannrNotFoundViewController */ = {
@@ -887,11 +928,13 @@
 		FAEF71812B465886000C232A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BBCC6F992CF684AD001C90A4 /* Localization */,
 				FA6E507E2B5109320041B7EC /* Enums */,
 				FAC3541F2B47C7B200C473C5 /* Fonts */,
 				FAEF71822B4658A4000C232A /* Constants */,
 				FAEF714F2B46566A000C232A /* Assets.xcassets */,
 				FAEF71542B46566A000C232A /* Info.plist */,
+				BBCC6F972CF680AC001C90A4 /* AnimationScan.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1140,11 +1183,19 @@
 				BB23F5DB2C91691500AAA386 /* PaywallViewController.xib in Resources */,
 				BB5B172B2C88823400E0769D /* ScannerFirstViewController.xib in Resources */,
 				BBD9B40D2C8BE56900E138E6 /* ScannerPlantIsHealthyController.xib in Resources */,
+				BBCC6FA02CF684BC001C90A4 /* Localizable_FR.strings in Resources */,
+				BBCC6FA12CF684BC001C90A4 /* Localizable_NL.strings in Resources */,
+				BBCC6FA22CF684BC001C90A4 /* Localizable_ESP.strings in Resources */,
+				BBCC6FA32CF684BC001C90A4 /* Localizable_UK.strings in Resources */,
+				BBCC6FA42CF684BC001C90A4 /* Localizable_GE.strings in Resources */,
+				BBCC6FA52CF684BC001C90A4 /* Localizable_IT.strings in Resources */,
 				BB19E0AF2C85478A009CED7D /* SettingsSwitchCell.xib in Resources */,
 				FAC3542F2B47C7B300C473C5 /* SFProDisplay-HeavyItalic.ttf in Resources */,
 				BB41644D2CEE629F00D3281E /* OpenPlantEditViewController.xib in Resources */,
 				BB56E7FB2C8A2E6000A3723B /* ScannerViewController.xib in Resources */,
 				FAEF71502B46566A000C232A /* Assets.xcassets in Resources */,
+				BBCC6F982CF680AC001C90A4 /* AnimationScan.json in Resources */,
+				BBCC6F952CF67EA5001C90A4 /* ScannerAnalyzerViewController.xib in Resources */,
 				FAC354302B47C7B300C473C5 /* SFProDisplay-LightItalic.ttf in Resources */,
 				FAC354312B47C7B300C473C5 /* SFProDisplay-UltraLightItalic.ttf in Resources */,
 			);
@@ -1208,6 +1259,7 @@
 				FAD536C72B4D1CBF009C57EE /* SettingsCoordinator.swift in Sources */,
 				BB12E0222CF197D6002CC421 /* EditPlantViewController.swift in Sources */,
 				FA6E507B2B4FA0BF0041B7EC /* SettingsHeader.swift in Sources */,
+				BBCC6F962CF67EA5001C90A4 /* ScannerAnalyzerViewController.swift in Sources */,
 				FAD536BB2B4BA634009C57EE /* MainViewItems.swift in Sources */,
 				BB5B172F2C88869500E0769D /* DataPickerViewController.swift in Sources */,
 				FA6E50802B5109480041B7EC /* ThemeEnumForTrialView.swift in Sources */,

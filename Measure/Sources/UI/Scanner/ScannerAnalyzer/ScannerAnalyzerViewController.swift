@@ -12,6 +12,7 @@ class ScannerAnalyzerViewController: BaseViewController {
     
     var scanningImage: UIImage!
     private var animationView: LottieAnimationView?
+    var scannerType: ScannerType = .identify
 
     override func viewDidLoad() {
         super.viewDidLoad()
