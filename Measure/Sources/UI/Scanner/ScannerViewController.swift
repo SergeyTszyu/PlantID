@@ -21,8 +21,9 @@ class ScannerViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        startCameraSession()
-        setupCameraView()
+//        startCameraSession()
+//        setupCameraView()
+        checkCameraPermission()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,8 +47,62 @@ class ScannerViewController: UIViewController,
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        cameraView.frame = view.bounds
-        previewLayer.frame = cameraView.bounds
+        if let cameraView = cameraView {
+            cameraView.frame = view.bounds
+        }
+        if let previewLayer = previewLayer {
+            previewLayer.frame = cameraView?.bounds ?? view.bounds
+        }
+    }
+
+    
+    private func checkCameraPermission() {
+        let cameraAuthorizationStatus = AVCaptureDevice.authorizationStatus(for: .video)
+        
+        switch cameraAuthorizationStatus {
+        case .notDetermined:
+            AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    if granted {
+                        self.handleCameraAccessGranted()
+                    } else {
+                        self.handleCameraAccessDenied()
+                    }
+                }
+            }
+
+        case .authorized:
+            handleCameraAccessGranted()
+
+        case .denied, .restricted:
+            handleCameraAccessDenied()
+
+        @unknown default:
+            handleCameraAccessDenied()
+        }
+    }
+    
+    private func handleCameraAccessGranted() {
+        startCameraSession()
+        setupCameraView()
+    }
+
+    private func handleCameraAccessDenied() {
+        let alertController = UIAlertController(
+            title: "Camera Access Denied",
+            message: "To use this app, please allow access to your camera in Settings.",
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { _ in
+            self.navigationController?.popToRootViewController(animated: true)
+        }))
+        alertController.addAction(UIAlertAction(title: "Settings", style: .default, handler: { _ in
+            if let settingsUrl = URL(string: UIApplication.openSettingsURLString) {
+                UIApplication.shared.open(settingsUrl)
+            }
+        }))
+        present(alertController, animated: true, completion: nil)
     }
     
     private func setupCameraView() {
