@@ -14,7 +14,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     ]
     
     // MARK: - OpenAI API Key
-    private let openAIKey = "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"
+    private let openAIKey = "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"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
               let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect,
               let duration = userInfo[UIResponder.keyboardAnimationDurationUserInfoKey] as? TimeInterval else { return }
         
-        // Вычисляем реальную высоту клавиатуры, учитывая высоту таб-бара
         let tabBarHeight = tabBarController?.tabBar.frame.height ?? 0
         let adjustedKeyboardHeight = keyboardFrame.height - tabBarHeight
         
@@ -107,6 +106,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
                 .font: UIFont.systemFont(ofSize: 16)
             ]
         )
+        messageTextField.textColor = .black
 
         // Add padding to the left
         let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 8, height: 50))
@@ -193,7 +193,6 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.reloadData()
         scrollToBottom()
         
-        // Fetch response from ChatGPT
         fetchChatGPTResponse(for: text)
     }
     
@@ -255,18 +254,15 @@ class ChatMessageCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
-        // Bubble background setup
         bubbleBackgroundView.layer.cornerRadius = 16
         bubbleBackgroundView.clipsToBounds = true
         contentView.addSubview(bubbleBackgroundView)
         
-        // Message label setup
         messageLabel.numberOfLines = 0
         messageLabel.font = UIFont.systemFont(ofSize: 16)
         messageLabel.textColor = UIColor(hexString: "#1D3C2B")
         contentView.addSubview(messageLabel)
         
-        // Avatar setup for bot
         avatarImageView.contentMode = .scaleAspectFit
         avatarImageView.layer.cornerRadius = 25
         avatarImageView.clipsToBounds = true
@@ -289,16 +285,14 @@ class ChatMessageCell: UITableViewCell {
         messageLabel.text = text
         
         if isBot {
-            // Бот: отображается аватар, закруглены верхние углы и правый нижний
             bubbleBackgroundView.backgroundColor = UIColor(hexString: "#CFCFCF")?.withAlphaComponent(0.6)
             messageLabel.textColor = .black
-            avatarImageView.isHidden = false  // Аватар отображается у бота
+            avatarImageView.isHidden = false
             bubbleBackgroundView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMaxYCorner]
         } else {
-            // Пользователь: аватар не отображается, закруглены верхние углы и левый нижний
             bubbleBackgroundView.backgroundColor = UIColor(hexString: "#0A9E03")?.withAlphaComponent(0.6)
             messageLabel.textColor = .white
-            avatarImageView.isHidden = true  // Аватар скрыт у пользователя
+            avatarImageView.isHidden = true
             bubbleBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
         }
         
