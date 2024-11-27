@@ -5,7 +5,7 @@
 import UIKit
 import RealmSwift
 
-private let plantApiKey = "b8Fg1u20OWjy9pEn4LMZtXZBbd0J39IJ0WNVobp4PZydwg8fbq"
+private let plantApiKey = "l97gCyafs6W5IitHMdhpfaJibRaBK1BgJI8BMqIHKp6VY9JVXW"
 
 final class ScannerManager: AnyObject {
     
@@ -13,6 +13,7 @@ final class ScannerManager: AnyObject {
     var scannerType: ScannerType = .identify
     
     var onScanCompleted: ((PlantIdentificationResponse) -> Void)?
+    var onScanHealthCompleted: ((PlantResponse) -> Void)?
     var onScanNotFound: (() -> Void)?
     var onScanIsHealthy: (() -> Void)?
     
@@ -78,10 +79,9 @@ final class ScannerManager: AnyObject {
                     let plantResponse = try decoder.decode(PlantResponse.self, from: data)
                     parsePlantHealthResponse(plantResponse)
                 } catch {
+                    // тут падает
+                    print("Failed to decode JSON:")
                     onScanNotFound?()
-//                    print("Failed to decode JSON: \(error)")
-//                    let vc = ScannerNotFoundViewController()
-//                    navigationController?.pushViewController(vc, animated: true)
                 }
                 
             } catch {
@@ -136,8 +136,6 @@ final class ScannerManager: AnyObject {
                  } catch {
                      print("Failed to decode JSON: \(error)")
                      onScanNotFound?()
-//                     let vc = ScannerNotFoundViewController()
-//                     navigationController?.pushViewController(vc, animated: true)
                  }
                  
              } catch {
@@ -209,20 +207,13 @@ final class ScannerManager: AnyObject {
                                 }
                             }
                             
-//                            let vc = ScannerPlantIsHealthyController()
                             savePlantToHistoryHealthy(plantResponse, response:
                                                         response, base64Image:
                                                         imageData.base64EncodedString())
-//                            self.navigationController?.pushViewController(vc, animated: true)
                             onScanIsHealthy?()
                         } else {
-//                            let vc = ScannerResultViewController()
-//                            vc.resultHealty = response
                             guard let imageData = scanningImage.jpegData(compressionQuality: 0.8) else { return }
                             plantResponse.localImageData = imageData
-//                            vc.result = plantResponse
-//                            vc.scannerType = .diagnose
-//                            vc.image = scanningImage
                             DispatchQueue.main.async {
                                 realmWrite {
                                     mainRealm.add(response, update: .modified)
@@ -234,19 +225,15 @@ final class ScannerManager: AnyObject {
                             savePlantToHistoryHealthy(plantResponse,
                                                       response: response,
                                                       base64Image: imageData.base64EncodedString())
-                            onScanCompleted?(plantResponse)
-//                            self.navigationController?.pushViewController(vc, animated: true)
+                            onScanHealthCompleted?(response)
                         }
                     } else {
+                        print("Failed to decode JSON:")
                         onScanNotFound?()
-//                        let vc = ScannerNotFoundViewController()
-//                        navigationController?.pushViewController(vc, animated: true)
                     }
                 } catch {
                     print("Failed to decode JSON: \(error)")
                     onScanNotFound?()
-//                    let vc = ScannerNotFoundViewController()
-//                    navigationController?.pushViewController(vc, animated: true)
                 }
                 
             } catch {
@@ -257,18 +244,12 @@ final class ScannerManager: AnyObject {
     
     func handlePlantIdentification(_ response: PlantIdentificationResponse) {
         if response.suggestions.first!.probability >= 0.2 {
-//            let vc = ScannerResultViewController()
-//            vc.result = response
-//            vc.scannerType = .identify
-//            vc.image = scanningImage
             guard let imageData = scanningImage.jpegData(compressionQuality: 0.8) else { return }
             savePlantToHistory(response, base64Image: imageData.base64EncodedString())
-//            self.navigationController?.pushViewController(vc, animated: true)
             onScanCompleted?(response)
         } else {
+            print("Failed to decode JSON:")
             onScanNotFound?()
-//            let vc = ScannerNotFoundViewController()
-//            navigationController?.pushViewController(vc, animated: true)
         }
     }
     

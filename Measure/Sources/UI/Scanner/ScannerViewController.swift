@@ -211,36 +211,12 @@ class ScannerViewController: UIViewController,
                let image = UIImage(data: imageData) else {
              return
          }
-        let manager = ScannerManager()
-        manager.scannerType = scannerType
-        manager.scanningImage = image
-        manager.setup()
-        manager.onScanCompleted = { [weak self] response in
-            if self!.scannerType == .identify {
-                let vc = ScannerResultIdentify()
-                vc.image = image
-                vc.result = response
-                DispatchQueue.main.async {
-                    self?.navigationController?.pushViewController(vc, animated: true)
-                }
-            } else {
-                
-            }
-        }
-        manager.onScanIsHealthy = {
-            DispatchQueue.main.async {
-                let vc = ScannerNotFoundViewController()
-                vc.ccannerResultType = .isHealthy
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-        }
-        manager.onScanNotFound = {
-            DispatchQueue.main.async {
-                let vc = ScannerNotFoundViewController()
-                vc.ccannerResultType = .notFound
-                self.navigationController?.pushViewController(vc, animated: true)
-            }
-        }
+        
+        incrementScanCount()
+        let vc = ScannerAnalyzerViewController()
+        vc.scannerType = scannerType
+        vc.scanningImage = image
+        self.navigationController?.pushViewController(vc, animated: true)
      }
     
     func openCamera() {
@@ -257,30 +233,11 @@ class ScannerViewController: UIViewController,
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let image = info[.originalImage] as? UIImage {
-            if let _ = image.jpegData(compressionQuality: 0.8) {
-                incrementScanCount()
-                let manager = ScannerManager()
-                manager.scannerType = scannerType
-                manager.scanningImage = image
-                manager.setup()
-                manager.onScanCompleted = { [weak self] response in
-                    
-                }
-                manager.onScanIsHealthy = {
-                    DispatchQueue.main.async {
-                        let vc = ScannerNotFoundViewController()
-                        vc.ccannerResultType = .isHealthy
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }
-                }
-                manager.onScanNotFound = {
-                    DispatchQueue.main.async {
-                        let vc = ScannerNotFoundViewController()
-                        vc.ccannerResultType = .notFound
-                        self.navigationController?.pushViewController(vc, animated: true)
-                    }
-                }
-            }
+            incrementScanCount()
+            let vc = ScannerAnalyzerViewController()
+            vc.scannerType = scannerType
+            vc.scanningImage = image
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         picker.dismiss(animated: true)
     }

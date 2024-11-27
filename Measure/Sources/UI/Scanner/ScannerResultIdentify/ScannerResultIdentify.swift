@@ -106,7 +106,8 @@ extension ScannerResultIdentify: UITableViewDataSource {
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultHealthHeaderCell", for: indexPath) as! ScannerResultHealthHeaderCell
                 return cell
             case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultHealthHeaderCell", for: indexPath) as! ScannerResultHealthHeaderCell
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultFooterCell", for: indexPath) as! ScannerResultFooterCell
+                cell.fill("What to do:", bottomText: "")
                 return cell
             default:
                 return UITableViewCell()
@@ -123,7 +124,7 @@ extension ScannerResultIdentify: UITableViewDataSource {
             }
             
         } else {
-            return 1
+            return 2
         }
     }
 }
