@@ -89,7 +89,6 @@ extension MainCoordinator: MainRouterDelegate {
     }
 
     func routeToCamera() {
-        CameraCoordinator(navigationController: navigationController).start()
     }
     
     func routeToTrial() {
