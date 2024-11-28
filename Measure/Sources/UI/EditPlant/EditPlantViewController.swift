@@ -1,9 +1,6 @@
 //
 //  EditPlantViewController.swift
 //  PlantNEW
-//
-//  Created by Sergey Tszyu on 23.11.2024.
-//
 
 import UIKit
 

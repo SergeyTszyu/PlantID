@@ -79,8 +79,6 @@ final class ScannerManager: AnyObject {
                     let plantResponse = try decoder.decode(PlantResponse.self, from: data)
                     parsePlantHealthResponse(plantResponse)
                 } catch {
-                    // тут падает
-                    print("Failed to decode JSON:")
                     onScanNotFound?()
                 }
                 

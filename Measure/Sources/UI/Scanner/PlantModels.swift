@@ -1,167 +1,3 @@
-//
-//  PlantModels.swift
-//  PlantID
-//
-//import Foundation
-//import UIKit
-//
-//struct PlantIdentificationResponse: Decodable {
-//    let id: Int
-//    let images: [Image]
-//    let suggestions: [Suggestion]
-//    
-//    struct Image: Decodable {
-//        let file_name: String
-//        let url: String
-//    }
-//
-//    struct Suggestion: Decodable {
-//        let id: Int
-//        let plant_name: String
-//        let probability: Float
-//        let plant_details: PlantDetails?
-//        let similar_images: [SimilarImage]
-//        
-//        struct SimilarImage: Decodable {
-//            let id: String
-//            let url: String
-//            let similarity: Float
-//        }
-//        
-//        struct PlantDetails: Decodable {
-//            let common_names: [String]?
-//            let taxonomy: Taxonomy
-//            let wiki_description: WikiDescription?
-//            let best_light_condition: String?
-//            let toxicity: String?
-//            let best_watering: String?
-//            
-//            struct Taxonomy: Decodable {
-//                let genus: String
-//                let order: String
-//                let family: String
-//            }
-//            
-//            struct WikiDescription: Decodable {
-//                let value: String
-//                let citation: String
-//            }
-//        }
-//    }
-//}
-//
-/////
-/////
-/////
-/////
-/////
-//
-//import Foundation
-//
-//// MARK: - Главная структура ответа
-//struct PlantResponse: Codable {
-//    let id: Int
-//    let customID: String?
-//    let metaData: MetaData
-//    let uploadedDatetime: Double
-//    let finishedDatetime: Double
-//    let images: [PlantImage]
-//    let modifiers: [String]
-//    let secret: String
-//    let failCause: String?
-//    let countable: Bool
-//    let feedback: String?
-//    let isPlant: Bool
-//    let isPlantProbability: Double
-//    let healthAssessment: HealthAssessment
-//
-//    enum CodingKeys: String, CodingKey {
-//        case id
-//        case customID = "custom_id"
-//        case metaData = "meta_data"
-//        case uploadedDatetime = "uploaded_datetime"
-//        case finishedDatetime = "finished_datetime"
-//        case images
-//        case modifiers
-//        case secret
-//        case failCause = "fail_cause"
-//        case countable
-//        case feedback
-//        case isPlant = "is_plant"
-//        case isPlantProbability = "is_plant_probability"
-//        case healthAssessment = "health_assessment"
-//    }
-//}
-//
-//// MARK: - Мета данные
-//struct MetaData: Codable {
-//    let latitude: Double?
-//    let longitude: Double?
-//    let date, datetime: String
-//}
-//
-//// MARK: - Изображение
-//struct PlantImage: Codable {
-//    let fileName: String
-//    let url: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case fileName = "file_name"
-//        case url
-//    }
-//}
-//
-//// MARK: - Оценка здоровья
-//struct HealthAssessment: Codable {
-//    let isHealthy: Bool
-//    let isHealthyProbability: Double
-//    let diseases: [Disease]
-//
-//    enum CodingKeys: String, CodingKey {
-//        case isHealthy = "is_healthy"
-//        case isHealthyProbability = "is_healthy_probability"
-//        case diseases
-//    }
-//}
-//
-//// MARK: - Болезнь
-//struct Disease: Codable {
-//    let name: String
-//    let probability: Double
-//    let redundant: Bool?
-//    let entityID: Int
-//    let diseaseDetails: DiseaseDetails
-//
-//    enum CodingKeys: String, CodingKey {
-//        case name
-//        case probability
-//        case redundant
-//        case entityID = "entity_id"
-//        case diseaseDetails = "disease_details"
-//    }
-//}
-//
-//// MARK: - Детали болезни
-//struct DiseaseDetails: Codable {
-//    let localName, description: String
-//    let url: String?  // Сделано опциональным, чтобы избежать ошибок с null
-//    let treatment: Treatment?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case localName = "local_name"
-//        case description
-//        case url
-//        case treatment
-//    }
-//}
-//
-//// MARK: - Лечение
-//struct Treatment: Codable {
-//    let chemical: [String]?
-//    let biological: [String]?
-//    let prevention: [String]?
-//}
-
 import RealmSwift
 import Realm
 
@@ -193,7 +29,6 @@ class PlantIdentificationResponse: Object, Decodable {
     @Persisted var sprayingDate: Date? = nil
     @Persisted var fertilizeDate: Date? = nil
     
-    // MARK: - Decodable initialization
     convenience required init(from decoder: Decoder) throws {
         self.init()
         
@@ -217,7 +52,6 @@ class PlantIdentificationResponse: Object, Decodable {
         return "id"
     }
 
-    // MARK: - Suggestion
     @objc(PlantIdentificationResponseSuggestion)
     class Suggestion: Object, Decodable {
         @Persisted var id: Int = 0
@@ -249,7 +83,6 @@ class PlantIdentificationResponse: Object, Decodable {
         // MARK: - PlantDetails
         @objc(PlantDetails)
         class PlantDetails: Object, Decodable {
-            // Сделаем commonNames опциональным, чтобы избежать ошибок при nil
             @Persisted var commonNames = List<String>()
             @Persisted var taxonomy: Taxonomy?
             @Persisted var wikiDescription: WikiDescription?
@@ -265,14 +98,12 @@ class PlantIdentificationResponse: Object, Decodable {
                 case toxicity
                 case bestWatering = "best_watering"
             }
-
-            // Переопределяем init для обработки случаев с nil
+            
             convenience required init(from decoder: Decoder) throws {
                 self.init()
-
+                
                 let container = try decoder.container(keyedBy: CodingKeys.self)
 
-                // Если commonNames нет или оно nil, присваиваем пустой список
                 let commonNamesArray = try container.decodeIfPresent([String].self, forKey: .commonNames) ?? []
                 commonNames.append(objectsIn: commonNamesArray)
                 
@@ -283,7 +114,6 @@ class PlantIdentificationResponse: Object, Decodable {
                 bestWatering = try container.decodeIfPresent(String.self, forKey: .bestWatering)
             }
 
-            // MARK: - Taxonomy
             @objc(Taxonomy)
             class Taxonomy: Object, Decodable {
                 @Persisted var genus: String = ""
@@ -381,17 +211,16 @@ class PlantResponse: Object, Decodable {
         }
     }
 
-    // MARK: - DiseaseDetails
     @objc(PlantResponseDiseaseDetails)
     class DiseaseDetails: Object, Decodable {
         @Persisted var localName: String = ""
-        @Persisted var plantDescription: String = "" // Переименовано с "description"
+        @Persisted var plantDescription: String = ""
         @Persisted var url: String? = nil
         @Persisted var treatment: Treatment?
 
         enum CodingKeys: String, CodingKey {
             case localName = "local_name"
-            case plantDescription = "description"  // Используем для соответствия с JSON
+            case plantDescription = "description"
             case url
             case treatment
         }

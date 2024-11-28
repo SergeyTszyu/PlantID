@@ -1,10 +1,6 @@
 //
 //  MainCellHeader.swift
 
-//
-//   on 07.01.2024.
-//
-
 import UIKit
 
 class MainCellHeader: UICollectionReusableView {

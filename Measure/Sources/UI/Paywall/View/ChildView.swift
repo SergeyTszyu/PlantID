@@ -1,10 +1,6 @@
 //
 //  ChildView.swift
 
-//
-//   on 06.01.2024.
-//
-
 import UIKit
 
 class ChildView: UIView {

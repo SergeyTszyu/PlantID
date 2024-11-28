@@ -13,10 +13,6 @@
 		993155EC2B6BF5720008EE8C /* IncreasedTapAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993155EB2B6BF5720008EE8C /* IncreasedTapAreaButton.swift */; };
 		999090592B88C190000FA8B6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999090582B88C190000FA8B6 /* AdSupport.framework */; };
 		BB0C7E2F2CA8338D00A57F6A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BB0C7E2E2CA8338D00A57F6A /* Lottie */; };
-		BB11E6072BB7266000C3D16B /* AreaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6002BB7266000C3D16B /* AreaViewController.swift */; };
-		BB11E6092BB7266000C3D16B /* LineNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6022BB7266000C3D16B /* LineNode.swift */; };
-		BB11E60A2BB7266000C3D16B /* MeasureSCNView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6032BB7266000C3D16B /* MeasureSCNView.swift */; };
-		BB11E60C2BB7266000C3D16B /* SCNSphere+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11E6052BB7266000C3D16B /* SCNSphere+Init.swift */; };
 		BB12DFFF2CEFEBED002CC421 /* Onboarding2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */; };
 		BB12E0002CEFEBED002CC421 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */; };
 		BB12E0212CF197D6002CC421 /* EditPlantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB12E0202CF197D6002CC421 /* EditPlantViewController.xib */; };
@@ -35,12 +31,9 @@
 		BB23F5DA2C91691500AAA386 /* PaywallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB23F5D82C91691500AAA386 /* PaywallViewController.swift */; };
 		BB23F5DB2C91691500AAA386 /* PaywallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB23F5D92C91691500AAA386 /* PaywallViewController.xib */; };
 		BB28F41B2C1AF4B4004A0519 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28F41A2C1AF4B4004A0519 /* UIButton+Extensions.swift */; };
-		BB28F41E2C1B687F004A0519 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB28F41D2C1B687F004A0519 /* HistoryDetailViewController.swift */; };
 		BB291CE12C6D176F00A31590 /* ChecklistCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB291CDF2C6D176F00A31590 /* ChecklistCollectionViewCell.swift */; };
 		BB291CE22C6D176F00A31590 /* ChecklistCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB291CE02C6D176F00A31590 /* ChecklistCollectionViewCell.xib */; };
 		BB36532A2C67AC6000858C98 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3653292C67AC6000858C98 /* BaseViewController.swift */; };
-		BB36532D2C69218F00858C98 /* HistoryDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB36532C2C69218F00858C98 /* HistoryDataViewController.swift */; };
-		BB3653322C6B47AA00858C98 /* OnboardingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3653312C6B47AA00858C98 /* OnboardingButton.swift */; };
 		BB4164482CECDC5100D3281E /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB4164472CECDC5100D3281E /* ChatViewController.xib */; };
 		BB4164492CECDC5100D3281E /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4164462CECDC5100D3281E /* ChatViewController.swift */; };
 		BB41644D2CEE629F00D3281E /* OpenPlantEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB41644C2CEE629F00D3281E /* OpenPlantEditViewController.xib */; };
@@ -77,10 +70,7 @@
 		BBB2B2622C21FADF0099B6FE /* TabsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2B2612C21FADF0099B6FE /* TabsControl.swift */; };
 		BBBFF9322C985C7C00737C36 /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BBBFF9312C985C7C00737C36 /* ApphudSDK */; };
 		BBBFF9352C985D1400737C36 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBBFF9342C985D1400737C36 /* RealmSwift */; };
-		BBC0D7422C8A7A3800BBBEB9 /* ScannerScanningViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC0D7412C8A7A3800BBBEB9 /* ScannerScanningViewController.xib */; };
-		BBC0D7432C8A7A3800BBBEB9 /* ScannerScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0D7402C8A7A3800BBBEB9 /* ScannerScanningViewController.swift */; };
 		BBC0D74A2C8A82D400BBBEB9 /* PlantModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC0D7492C8A82D400BBBEB9 /* PlantModels.swift */; };
-		BBC752742BDF5580008AA207 /* GradientLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC752732BDF5580008AA207 /* GradientLabel.swift */; };
 		BBC9EEC92CE86B7A00B48FD8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBC9EEC72CE86B7A00B48FD8 /* Localizable.strings */; };
 		BBC9EEEA2CEA302C00B48FD8 /* OpenPlantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */; };
 		BBC9EEEB2CEA302C00B48FD8 /* OpenPlantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC9EEE82CEA302C00B48FD8 /* OpenPlantViewController.swift */; };
@@ -102,14 +92,8 @@
 		FA6E507B2B4FA0BF0041B7EC /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507A2B4FA0BF0041B7EC /* SettingsHeader.swift */; };
 		FA6E507D2B50F2F90041B7EC /* CustomTrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507C2B50F2F80041B7EC /* CustomTrialView.swift */; };
 		FA6E50802B5109480041B7EC /* ThemeEnumForTrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507F2B5109480041B7EC /* ThemeEnumForTrialView.swift */; };
-		FA6E514F2B59F0CB0041B7EC /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E514E2B59F0CA0041B7EC /* CameraViewController.swift */; };
-		FA6E51512B59F1120041B7EC /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E51502B59F1120041B7EC /* CameraViewModel.swift */; };
-		FA6E51532B59F1320041B7EC /* CameraRouterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E51522B59F1320041B7EC /* CameraRouterDelegate.swift */; };
-		FA6E51552B59F1450041B7EC /* CameraCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E51542B59F1450041B7EC /* CameraCoordinator.swift */; };
 		FA6E515B2B59F9A30041B7EC /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6E515A2B59F9A30041B7EC /* ARKit.framework */; };
-		FA6E515E2B5A223A0041B7EC /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E515D2B5A223A0041B7EC /* ResultViewController.swift */; };
 		FA7183BD2C7BAD4A0068974B /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA7183BB2C7BAD4A0068974B /* History.xcdatamodeld */; };
-		FA7183C92C7CFBED0068974B /* EnlargedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7183C82C7CFBED0068974B /* EnlargedButton.swift */; };
 		FAC3541E2B468D6A00C473C5 /* OnboardingItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC3541D2B468D6A00C473C5 /* OnboardingItems.swift */; };
 		FAC354292B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAC354202B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf */; };
 		FAC3542A2B47C7B300C473C5 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAC354212B47C7B200C473C5 /* SFProDisplay-Medium.ttf */; };
@@ -195,10 +179,6 @@
 		993155EB2B6BF5720008EE8C /* IncreasedTapAreaButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncreasedTapAreaButton.swift; sourceTree = "<group>"; };
 		999090582B88C190000FA8B6 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		9990905A2B88C196000FA8B6 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
-		BB11E6002BB7266000C3D16B /* AreaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AreaViewController.swift; sourceTree = "<group>"; };
-		BB11E6022BB7266000C3D16B /* LineNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineNode.swift; sourceTree = "<group>"; };
-		BB11E6032BB7266000C3D16B /* MeasureSCNView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasureSCNView.swift; sourceTree = "<group>"; };
-		BB11E6052BB7266000C3D16B /* SCNSphere+Init.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCNSphere+Init.swift"; sourceTree = "<group>"; };
 		BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding2ViewController.swift; sourceTree = "<group>"; };
 		BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Onboarding2ViewController.xib; sourceTree = "<group>"; };
 		BB12E01F2CF197D6002CC421 /* EditPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPlantViewController.swift; sourceTree = "<group>"; };
@@ -217,12 +197,9 @@
 		BB23F5D82C91691500AAA386 /* PaywallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewController.swift; sourceTree = "<group>"; };
 		BB23F5D92C91691500AAA386 /* PaywallViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaywallViewController.xib; sourceTree = "<group>"; };
 		BB28F41A2C1AF4B4004A0519 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
-		BB28F41D2C1B687F004A0519 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		BB291CDF2C6D176F00A31590 /* ChecklistCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistCollectionViewCell.swift; sourceTree = "<group>"; };
 		BB291CE02C6D176F00A31590 /* ChecklistCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChecklistCollectionViewCell.xib; sourceTree = "<group>"; };
 		BB3653292C67AC6000858C98 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		BB36532C2C69218F00858C98 /* HistoryDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataViewController.swift; sourceTree = "<group>"; };
-		BB3653312C6B47AA00858C98 /* OnboardingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingButton.swift; sourceTree = "<group>"; };
 		BB4164462CECDC5100D3281E /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		BB4164472CECDC5100D3281E /* ChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
 		BB41644B2CEE629F00D3281E /* OpenPlantEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPlantEditViewController.swift; sourceTree = "<group>"; };
@@ -255,10 +232,7 @@
 		BBA4C3782C81CB440092D8FF /* MyGardenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGardenViewController.swift; sourceTree = "<group>"; };
 		BBA4C37D2C8300F30092D8FF /* OnboardingReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingReviewViewController.swift; sourceTree = "<group>"; };
 		BBB2B2612C21FADF0099B6FE /* TabsControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabsControl.swift; sourceTree = "<group>"; };
-		BBC0D7402C8A7A3800BBBEB9 /* ScannerScanningViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerScanningViewController.swift; sourceTree = "<group>"; };
-		BBC0D7412C8A7A3800BBBEB9 /* ScannerScanningViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerScanningViewController.xib; sourceTree = "<group>"; };
 		BBC0D7492C8A82D400BBBEB9 /* PlantModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantModels.swift; sourceTree = "<group>"; };
-		BBC752732BDF5580008AA207 /* GradientLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientLabel.swift; sourceTree = "<group>"; };
 		BBC9EEC82CE86B7A00B48FD8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBC9EEE82CEA302C00B48FD8 /* OpenPlantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenPlantViewController.swift; sourceTree = "<group>"; };
 		BBC9EEE92CEA302C00B48FD8 /* OpenPlantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenPlantViewController.xib; sourceTree = "<group>"; };
@@ -279,14 +253,8 @@
 		FA6E507A2B4FA0BF0041B7EC /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		FA6E507C2B50F2F80041B7EC /* CustomTrialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTrialView.swift; sourceTree = "<group>"; };
 		FA6E507F2B5109480041B7EC /* ThemeEnumForTrialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeEnumForTrialView.swift; sourceTree = "<group>"; };
-		FA6E514E2B59F0CA0041B7EC /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
-		FA6E51502B59F1120041B7EC /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
-		FA6E51522B59F1320041B7EC /* CameraRouterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraRouterDelegate.swift; sourceTree = "<group>"; };
-		FA6E51542B59F1450041B7EC /* CameraCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCoordinator.swift; sourceTree = "<group>"; };
 		FA6E515A2B59F9A30041B7EC /* ARKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ARKit.framework; path = System/Library/Frameworks/ARKit.framework; sourceTree = SDKROOT; };
-		FA6E515D2B5A223A0041B7EC /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		FA7183BC2C7BAD4A0068974B /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
-		FA7183C82C7CFBED0068974B /* EnlargedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnlargedButton.swift; sourceTree = "<group>"; };
 		FAC3541D2B468D6A00C473C5 /* OnboardingItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingItems.swift; sourceTree = "<group>"; };
 		FAC354202B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
 		FAC354212B47C7B200C473C5 /* SFProDisplay-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SFProDisplay-Medium.ttf"; sourceTree = "<group>"; };
@@ -386,17 +354,6 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		BB11E6062BB7266000C3D16B /* NewCamera */ = {
-			isa = PBXGroup;
-			children = (
-				BB11E6002BB7266000C3D16B /* AreaViewController.swift */,
-				BB11E6022BB7266000C3D16B /* LineNode.swift */,
-				BB11E6032BB7266000C3D16B /* MeasureSCNView.swift */,
-				BB11E6052BB7266000C3D16B /* SCNSphere+Init.swift */,
-			);
-			path = NewCamera;
-			sourceTree = "<group>";
-		};
 		BB12DFFC2CEFEBE0002CC421 /* Onboarding2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,14 +400,6 @@
 			path = NewMyGarden;
 			sourceTree = "<group>";
 		};
-		BB28F41C2C1B685E004A0519 /* HistoryDetailViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BB28F41D2C1B687F004A0519 /* HistoryDetailViewController.swift */,
-			);
-			path = HistoryDetailViewController;
-			sourceTree = "<group>";
-		};
 		BB291CDE2C6D175D00A31590 /* New Group */ = {
 			isa = PBXGroup;
 			children = (
@@ -466,22 +415,6 @@
 				BB3653292C67AC6000858C98 /* BaseViewController.swift */,
 			);
 			path = Base;
-			sourceTree = "<group>";
-		};
-		BB36532B2C69215300858C98 /* HistoryDataViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BB36532C2C69218F00858C98 /* HistoryDataViewController.swift */,
-			);
-			path = HistoryDataViewController;
-			sourceTree = "<group>";
-		};
-		BB3653302C6B479300858C98 /* OnboardingButton */ = {
-			isa = PBXGroup;
-			children = (
-				BB3653312C6B47AA00858C98 /* OnboardingButton.swift */,
-			);
-			path = OnboardingButton;
 			sourceTree = "<group>";
 		};
 		BB367D922C60CFB1008D05CE /* Model */ = {
@@ -522,8 +455,6 @@
 		BB4C5EC72C149327003F23EB /* History */ = {
 			isa = PBXGroup;
 			children = (
-				BB36532B2C69215300858C98 /* HistoryDataViewController */,
-				BB28F41C2C1B685E004A0519 /* HistoryDetailViewController */,
 				BB367D922C60CFB1008D05CE /* Model */,
 				BB52F76A2C15E86200FECB23 /* Cell */,
 				BB4C5EC82C149340003F23EB /* HistoryViewController.swift */,
@@ -605,7 +536,6 @@
 				BBD9B4082C8BE4F700E138E6 /* ScannerPlantIsHealthy */,
 				BBD9B3FD2C8AADB700E138E6 /* ScannrNotFoundViewController */,
 				BB83E1192CDE7F7700FAC3A0 /* ScannerResultViewController */,
-				BBC0D73F2C8A7A2200BBBEB9 /* ScannerScanningViewController */,
 				BB5B17272C88821B00E0769D /* ScannerFirstViewController */,
 				BB56E7F92C8A2E6000A3723B /* ScannerViewController.swift */,
 				BB56E7FA2C8A2E6000A3723B /* ScannerViewController.xib */,
@@ -622,15 +552,6 @@
 				BBB2B2612C21FADF0099B6FE /* TabsControl.swift */,
 			);
 			path = TabsControl;
-			sourceTree = "<group>";
-		};
-		BBC0D73F2C8A7A2200BBBEB9 /* ScannerScanningViewController */ = {
-			isa = PBXGroup;
-			children = (
-				BBC0D7402C8A7A3800BBBEB9 /* ScannerScanningViewController.swift */,
-				BBC0D7412C8A7A3800BBBEB9 /* ScannerScanningViewController.xib */,
-			);
-			path = ScannerScanningViewController;
 			sourceTree = "<group>";
 		};
 		BBC9EEE72CEA301400B48FD8 /* OpenPlant */ = {
@@ -703,19 +624,6 @@
 			path = Enums;
 			sourceTree = "<group>";
 		};
-		FA6E514D2B59F06E0041B7EC /* Camera */ = {
-			isa = PBXGroup;
-			children = (
-				BB11E6062BB7266000C3D16B /* NewCamera */,
-				FA6E515C2B5A22110041B7EC /* Result */,
-				FA6E514E2B59F0CA0041B7EC /* CameraViewController.swift */,
-				FA6E51502B59F1120041B7EC /* CameraViewModel.swift */,
-				FA6E51522B59F1320041B7EC /* CameraRouterDelegate.swift */,
-				FA6E51542B59F1450041B7EC /* CameraCoordinator.swift */,
-			);
-			path = Camera;
-			sourceTree = "<group>";
-		};
 		FA6E51592B59F9A30041B7EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -725,14 +633,6 @@
 				FA6E515A2B59F9A30041B7EC /* ARKit.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FA6E515C2B5A22110041B7EC /* Result */ = {
-			isa = PBXGroup;
-			children = (
-				FA6E515D2B5A223A0041B7EC /* ResultViewController.swift */,
-			);
-			path = Result;
 			sourceTree = "<group>";
 		};
 		FAC3541A2B468D0400C473C5 /* OnboardingItems */ = {
@@ -849,8 +749,6 @@
 				BBB2B2602C21FAB70099B6FE /* TabsControl */,
 				FA6E507C2B50F2F80041B7EC /* CustomTrialView.swift */,
 				BB7B2CA02BDABA7100A675C3 /* PaywallButton.swift */,
-				BBC752732BDF5580008AA207 /* GradientLabel.swift */,
-				FA7183C82C7CFBED0068974B /* EnlargedButton.swift */,
 				BB5B17312C88895900E0769D /* CornerView.swift */,
 			);
 			path = CustomViews;
@@ -992,7 +890,6 @@
 				BBA4C3772C81CB340092D8FF /* MyGarden */,
 				BB3653282C67AC1D00858C98 /* Base */,
 				BB4C5EC72C149327003F23EB /* History */,
-				FA6E514D2B59F06E0041B7EC /* Camera */,
 				FAD536BF2B4D1C0C009C57EE /* Settings */,
 				FAD5369D2B4A70D6009C57EE /* Main */,
 				FAC354322B482E8600C473C5 /* Paywall */,
@@ -1015,7 +912,6 @@
 				BB12DFFC2CEFEBE0002CC421 /* Onboarding2 */,
 				BB41644F2CEFB91D00D3281E /* Onboarding1 */,
 				BB5B17222C88321B00E0769D /* Cell */,
-				BB3653302C6B479300858C98 /* OnboardingButton */,
 				FAC3541A2B468D0400C473C5 /* OnboardingItems */,
 				FAEF71922B465B1E000C232A /* OnboardingViewController.swift */,
 				FAEF71982B465CC4000C232A /* OboardingViewModel.swift */,
@@ -1174,7 +1070,6 @@
 				BB12E0212CF197D6002CC421 /* EditPlantViewController.xib in Resources */,
 				BB12E0262CF19868002CC421 /* EditPlantCell.xib in Resources */,
 				BBC9EEEA2CEA302C00B48FD8 /* OpenPlantViewController.xib in Resources */,
-				BBC0D7422C8A7A3800BBBEB9 /* ScannerScanningViewController.xib in Resources */,
 				BB83E0CF2CDE755200FAC3A0 /* ScannerResultIdentify.xib in Resources */,
 				FAC3542E2B47C7B300C473C5 /* SFProDisplay-Bold.ttf in Resources */,
 				FAC3542A2B47C7B300C473C5 /* SFProDisplay-Medium.ttf in Resources */,
@@ -1223,30 +1118,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAEF71992B465CC4000C232A /* OboardingViewModel.swift in Sources */,
-				BB11E60C2BB7266000C3D16B /* SCNSphere+Init.swift in Sources */,
 				FAD5369F2B4A7109009C57EE /* MainViewController.swift in Sources */,
 				BB291CE12C6D176F00A31590 /* ChecklistCollectionViewCell.swift in Sources */,
 				BBC9EEEB2CEA302C00B48FD8 /* OpenPlantViewController.swift in Sources */,
 				993155EA2B6BEC7F0008EE8C /* Url.swift in Sources */,
-				FA6E51532B59F1320041B7EC /* CameraRouterDelegate.swift in Sources */,
 				BB4164532CEFB92C00D3281E /* Onboarding1ViewController.swift in Sources */,
 				FAD536C12B4D1C45009C57EE /* SettingsViewController.swift in Sources */,
-				BB3653322C6B47AA00858C98 /* OnboardingButton.swift in Sources */,
 				FAEF71952B465B74000C232A /* OnboardingRouterDelegate.swift in Sources */,
 				BB1E12562CDB7B160042E80D /* NewMyGardenViewController.swift in Sources */,
 				FA6E507D2B50F2F90041B7EC /* CustomTrialView.swift in Sources */,
 				FAD536CB2B4F00A5009C57EE /* SettingsItems.swift in Sources */,
-				BB11E6092BB7266000C3D16B /* LineNode.swift in Sources */,
-				BBC752742BDF5580008AA207 /* GradientLabel.swift in Sources */,
 				FAEF717E2B465811000C232A /* UIView+Extensions.swift in Sources */,
 				FAEF71842B4658C4000C232A /* Theme.swift in Sources */,
 				BB52F7872C16DEB000FECB23 /* HistoryManager.swift in Sources */,
 				BBB2B2622C21FADF0099B6FE /* TabsControl.swift in Sources */,
 				FAD536B92B4BA3AE009C57EE /* MainViewController+Extensions.swift in Sources */,
-				BB11E6072BB7266000C3D16B /* AreaViewController.swift in Sources */,
 				FAC3543D2B4915D500C473C5 /* ChildView.swift in Sources */,
 				BB12E0272CF19868002CC421 /* EditPlantCell.swift in Sources */,
-				BB28F41E2C1B687F004A0519 /* HistoryDetailViewController.swift in Sources */,
 				FAC354362B482ECE00C473C5 /* PaywallViewModel.swift in Sources */,
 				FA7183BD2C7BAD4A0068974B /* History.xcdatamodeld in Sources */,
 				BBD9B4012C8AADCE00E138E6 /* ScannerNotFoundViewController.swift in Sources */,
@@ -1273,28 +1161,22 @@
 				BBC0D74A2C8A82D400BBBEB9 /* PlantModels.swift in Sources */,
 				993155EC2B6BF5720008EE8C /* IncreasedTapAreaButton.swift in Sources */,
 				BB41644E2CEE629F00D3281E /* OpenPlantEditViewController.swift in Sources */,
-				FA6E51512B59F1120041B7EC /* CameraViewModel.swift in Sources */,
 				BB28F41B2C1AF4B4004A0519 /* UIButton+Extensions.swift in Sources */,
 				BB19E0B22C8549A4009CED7D /* SettingsListCell.swift in Sources */,
-				BB11E60A2BB7266000C3D16B /* MeasureSCNView.swift in Sources */,
 				BB52F76D2C15E87D00FECB23 /* HistoryCell.swift in Sources */,
 				BB36532A2C67AC6000858C98 /* BaseViewController.swift in Sources */,
 				BBA4C3792C81CB440092D8FF /* MyGardenViewController.swift in Sources */,
-				FA7183C92C7CFBED0068974B /* EnlargedButton.swift in Sources */,
 				FAC354402B491F4000C473C5 /* ChildViewItems.swift in Sources */,
 				BB4164492CECDC5100D3281E /* ChatViewController.swift in Sources */,
 				FAD536C52B4D1CAB009C57EE /* SettingsRoutingDelegate.swift in Sources */,
 				FAC354382B482EEA00C473C5 /* PaywallRouterDelegate.swift in Sources */,
 				FAC3543A2B482F0C00C473C5 /* PaywallCoordinator.swift in Sources */,
 				FAEF718D2B465982000C232A /* Coordinator.swift in Sources */,
-				BBC0D7432C8A7A3800BBBEB9 /* ScannerScanningViewController.swift in Sources */,
 				BBA4C37E2C8300F30092D8FF /* OnboardingReviewViewController.swift in Sources */,
 				FAEF71932B465B1E000C232A /* OnboardingViewController.swift in Sources */,
 				BB5B17252C88323300E0769D /* ReviewCell.swift in Sources */,
 				FAD536AD2B4AF53F009C57EE /* HowToUseCell.swift in Sources */,
 				BB56E7FC2C8A2E6000A3723B /* ScannerViewController.swift in Sources */,
-				FA6E515E2B5A223A0041B7EC /* ResultViewController.swift in Sources */,
-				FA6E514F2B59F0CB0041B7EC /* CameraViewController.swift in Sources */,
 				BB5B17322C88895A00E0769D /* CornerView.swift in Sources */,
 				FAD536C32B4D1C84009C57EE /* SettingsViewModel.swift in Sources */,
 				BB12E0002CEFEBED002CC421 /* Onboarding2ViewController.swift in Sources */,
@@ -1310,11 +1192,9 @@
 				FAD536B62B4B0F40009C57EE /* MainCellHeader.swift in Sources */,
 				FAEF71492B465668000C232A /* SceneDelegate.swift in Sources */,
 				BB7B2CA12BDABA7100A675C3 /* PaywallButton.swift in Sources */,
-				BB36532D2C69218F00858C98 /* HistoryDataViewController.swift in Sources */,
 				FAD536A12B4A7146009C57EE /* MainViewModel.swift in Sources */,
 				BB19E0AE2C85478A009CED7D /* SettingsSwitchCell.swift in Sources */,
 				BB83E0CE2CDE755200FAC3A0 /* ScannerResultIdentify.swift in Sources */,
-				FA6E51552B59F1450041B7EC /* CameraCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,8 +1,5 @@
 //
 //  SettingsViewModel.swift
-//
-//   on 09.01.2024.
-//
 
 import UIKit
 import MessageUI

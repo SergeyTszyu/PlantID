@@ -237,10 +237,3 @@ extension HistoryViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - HistoryDetailViewControllerDelegate
-
-extension HistoryViewController: HistoryDataViewControllerDelegate {
-    func didUpdateHistory() {
-        fetchData()
-    }
-}

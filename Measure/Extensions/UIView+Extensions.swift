@@ -1,10 +1,6 @@
 //
 //  UIView+Extensions.swift
 
-//
-//   c 04.01.2024.
-//
-
 import UIKit
 
 extension UIView {

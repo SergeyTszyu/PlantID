@@ -1,10 +1,6 @@
 //
 //  Theme.swift
 
-//
-//   on 04.01.2024.
-//
-
 import UIKit
 
 struct Theme {

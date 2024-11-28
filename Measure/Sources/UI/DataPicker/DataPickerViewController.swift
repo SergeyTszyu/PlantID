@@ -63,9 +63,6 @@ final class DataPickerViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        UIView.animate(withDuration: 0.5) {
-//            
-//        }
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.3)
     }
     
@@ -135,13 +132,11 @@ final class DataPickerViewController: BaseViewController {
         
         content.sound = .default
         
-        // Создаем триггер на выбранную дату и время
         let triggerDate = Calendar.current.dateComponents([.hour, .minute], from: date)
-        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true) // Установите повторение на true для ежедневных уведомлений
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
         
         let request = UNNotificationRequest(identifier: "PlantNotificationIdentifier", content: content, trigger: trigger)
         
-        // Добавляем запрос в центр уведомлений
         center.add(request) { error in
             if let error = error {
                 print("Error scheduling notification: \(error.localizedDescription)")

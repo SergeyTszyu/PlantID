@@ -1,10 +1,6 @@
 //
 //  SettingsHeader.swift
 
-//
-//   on 11.01.2024.
-//
-
 import UIKit
 
 class SettingsHeader: UITableViewHeaderFooterView {

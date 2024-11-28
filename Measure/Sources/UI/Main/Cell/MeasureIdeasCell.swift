@@ -1,9 +1,3 @@
-//
-
-//
-//   on 07.01.2024.
-//
-
 import UIKit
 import AVFoundation
 
