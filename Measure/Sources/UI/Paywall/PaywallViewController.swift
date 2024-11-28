@@ -96,7 +96,7 @@ final class PaywallViewController: BaseViewController {
         setupLayout()
         
         skipButton.isHidden = true
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(showCloseButton), userInfo: nil, repeats: false)
+        Timer.scheduledTimer(timeInterval: 6.0, target: self, selector: #selector(showCloseButton), userInfo: nil, repeats: false)
         
         PremiumManager.shared.$weeklyPrice
             .receive(on: DispatchQueue.main)

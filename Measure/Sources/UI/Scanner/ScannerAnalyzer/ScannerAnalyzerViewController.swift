@@ -29,6 +29,12 @@ final class ScannerAnalyzerViewController: BaseViewController {
         scan()
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        animationView!.frame = scanningImageView.bounds
+    }
+    
     func scan() {
         let manager = ScannerManager()
         manager.scannerType = scannerType
@@ -45,10 +51,11 @@ final class ScannerAnalyzerViewController: BaseViewController {
             } else {
             }
         }
-        manager.onScanHealthCompleted = { [weak self] response in
+        manager.onScanHealthCompleted = { [weak self] response, respId in
             let vc = ScannerResultIdentify()
             vc.image = self!.scanningImage
             vc.resultHealty = response
+            vc.result = respId
             vc.scannerType = .diagnose
             DispatchQueue.main.async {
                 self?.navigationController?.pushViewController(vc, animated: true)

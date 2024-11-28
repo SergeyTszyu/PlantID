@@ -17,20 +17,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-Bs-Dq5" customClass="CornerImageView" customModule="PlantNEW_App" customModuleProvider="target">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EnL-Bs-Dq5" customClass="CornerImageView" customModule="PlantNEW_App" customModuleProvider="target">
                         <rect key="frame" x="16" y="8" width="120" height="120"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="FYs-lj-Rqb"/>
                             <constraint firstAttribute="height" constant="120" id="Tyv-GP-JuT"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                                <color key="value" red="0.039215686274509803" green="0.61960784313725492" blue="0.011764705882352941" alpha="1" colorSpace="calibratedRGB"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                                <integer key="value" value="1"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xUh-Ik-QdY">
                         <rect key="frame" x="154" y="8" width="150" height="21"/>
@@ -41,9 +33,9 @@
                         <color key="textColor" red="0.1137254902" green="0.23529411759999999" blue="0.16862745100000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-QM-bhY">
-                        <rect key="frame" x="154" y="35" width="148" height="20.333333333333329"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGK-QM-bhY">
+                        <rect key="frame" x="154" y="35" width="148" height="19.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
                         <color key="textColor" red="0.92941176470588238" green="0.40392156862745099" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -63,6 +55,11 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="lz4-2w-Nzg"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="bottomLabel" destination="VGK-QM-bhY" id="TKC-jE-Bgr"/>
+                <outlet property="plantImaggegVIeew" destination="EnL-Bs-Dq5" id="WlJ-Ia-47l"/>
+                <outlet property="topLabel" destination="xUh-Ik-QdY" id="KA0-zj-iIa"/>
+            </connections>
             <point key="canvasLocation" x="74.809160305343511" y="19.718309859154932"/>
         </tableViewCell>
     </objects>

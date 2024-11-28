@@ -13,7 +13,7 @@ final class ScannerManager: AnyObject {
     var scannerType: ScannerType = .identify
     
     var onScanCompleted: ((PlantIdentificationResponse) -> Void)?
-    var onScanHealthCompleted: ((PlantResponse) -> Void)?
+    var onScanHealthCompleted: ((PlantResponse, PlantIdentificationResponse) -> Void)?
     var onScanNotFound: (() -> Void)?
     var onScanIsHealthy: (() -> Void)?
     
@@ -225,7 +225,7 @@ final class ScannerManager: AnyObject {
                             savePlantToHistoryHealthy(plantResponse,
                                                       response: response,
                                                       base64Image: imageData.base64EncodedString())
-                            onScanHealthCompleted?(response)
+                            onScanHealthCompleted?(response, plantResponse)
                         }
                     } else {
                         print("Failed to decode JSON:")

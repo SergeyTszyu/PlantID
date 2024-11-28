@@ -58,6 +58,8 @@ class ScannerResultIdentify: BaseViewController {
             try? mainRealm.write {
                 existingResponse.isAddedToGarden = true
             }
+            NotificationCenter.default.post(name: Notification.Name("GardenUpdated"), object: nil)
+            navigationController?.popToRootViewController(animated: true)
             tabBarController?.selectedIndex = 0
             return
         }
@@ -104,13 +106,17 @@ extension ScannerResultIdentify: UITableViewDataSource {
             switch indexPath.row {
             case 0:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultHealthHeaderCell", for: indexPath) as! ScannerResultHealthHeaderCell
-                return cell
-            case 1:
-                let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultFooterCell", for: indexPath) as! ScannerResultFooterCell
-                cell.fill("What to do:", bottomText: "")
+                cell.fill(resultHealty, image: image, plantName: result.suggestions.first!.plantName)
                 return cell
             default:
-                return UITableViewCell()
+                let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultFooterCell", for: indexPath) as! ScannerResultFooterCell
+                
+                let diseaseIndex = indexPath.row - 1
+                if diseaseIndex < resultHealty.healthAssessment?.diseases.count ?? 0 {
+                    let disease = resultHealty.healthAssessment?.diseases[diseaseIndex]
+                    cell.fill(disease!.name, response: resultHealty)
+                }
+                return cell
             }
         }
     }
@@ -124,7 +130,7 @@ extension ScannerResultIdentify: UITableViewDataSource {
             }
             
         } else {
-            return 2
+            return 1 + ((resultHealty.healthAssessment?.diseases.filter { $0.diseaseDetails!.treatment != nil }.count) ?? 1)
         }
     }
 }
