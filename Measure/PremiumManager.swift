@@ -36,6 +36,7 @@ final class PremiumManager {
     }
 }
 
+
 extension SKProduct {
     func localizedPrice() -> String {
         let formatter = NumberFormatter()
@@ -44,3 +45,4 @@ extension SKProduct {
         return formatter.string(from: self.price) ?? ""
     }
 }
+

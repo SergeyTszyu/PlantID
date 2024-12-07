@@ -135,3 +135,9 @@ final class CustomTabBarController: UITabBarController, UITabBarControllerDelega
         return true
      }
 }
+
+protocol MainRouterDelegate: AnyObject {
+    func routeToSettings()
+    func routeToCamera()
+    func routeToTrial()
+}

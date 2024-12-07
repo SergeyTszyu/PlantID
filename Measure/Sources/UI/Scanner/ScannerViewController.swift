@@ -21,8 +21,6 @@ class ScannerViewController: UIViewController,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        startCameraSession()
-//        setupCameraView()
         checkCameraPermission()
     }
     

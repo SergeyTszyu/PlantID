@@ -173,7 +173,6 @@ final class PaywallViewController: BaseViewController {
             backgroundImageView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
             backgroundImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             backgroundImageView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
-//            backgroundImageView.bottomAnchor.constraint(equalTo: annuallyButton.topAnchor, constant: -16),
             backgroundImageView.heightAnchor.constraint(equalToConstant: 338),
             
             annuallyButton.bottomAnchor.constraint(equalTo: weeklyButton.topAnchor, constant: -18),

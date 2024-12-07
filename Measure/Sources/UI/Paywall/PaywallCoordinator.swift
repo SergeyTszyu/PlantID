@@ -1,5 +1,9 @@
 import UIKit
 
+protocol PaywallRouterDelegate: AnyObject {
+    func routeToMainView()
+}
+
 class PaywallCoordinator: Coordinator {
     var navigationController: UINavigationController
 

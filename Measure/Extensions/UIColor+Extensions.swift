@@ -20,12 +20,9 @@ extension UIColor {
         Scanner(string: hex).scanHexInt32(&int)
         let a, r, g, b: UInt32
         switch hex.count {
-        case 3: // RGB (12-bit)
-            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
-        case 6: // RGB (24-bit)
-            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
-        case 8: // ARGB (32-bit)
-            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        case 3: (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
         default:
             return nil
         }
@@ -33,7 +30,6 @@ extension UIColor {
     }
 }
 
-// For Dinamic theme colors
 extension UIColor {
     static func dynamicColor(light: UIColor, dark: UIColor) -> UIColor {
         if #available(iOS 13.0, *) {

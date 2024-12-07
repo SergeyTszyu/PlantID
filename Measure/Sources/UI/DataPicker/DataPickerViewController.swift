@@ -6,18 +6,17 @@ import UIKit
 
 enum DatePickerType {
     case watering
-    case spraying
-    case fertilize
+    case pot
+    case cut
     case time
-    
     func title() -> String {
         switch self {
         case .watering:
             return "Next watering"
-        case .spraying:
-            return "Next Spraying"
-        case .fertilize:
-            return "Next Fertilize"
+        case .pot:
+            return "Next pot"
+        case .cut:
+            return "Next cut"
         case .time:
             return "Choose time to \nnotifications will arrive"
         }
@@ -150,9 +149,9 @@ extension DataPickerViewController: UIPickerViewDataSource, UIPickerViewDelegate
 
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         if pickerType == .time {
-            return 3 // Часы, минуты, AM/PM
+            return 3
         } else {
-            return 2 // Время (количество и единицы измерения)
+            return 2
         }
     }
 

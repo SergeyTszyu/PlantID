@@ -159,11 +159,9 @@ final class OnboardingViewController: BaseViewController, UIPageViewControllerDe
             ])
         } else if currentIndex == 1 { // Для второго индекса
             continueButtonWidthConstraint = continueButton.widthAnchor.constraint(equalToConstant: 172)
-            // Убираем trailingAnchor
             if let trailingConstraint = continueButtonTrailingConstraint {
                 NSLayoutConstraint.deactivate([trailingConstraint])
             }
-            // Применяем only leadingAnchor для выравнивания кнопки
             NSLayoutConstraint.activate([
                 continueButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
                 continueButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -154),
@@ -206,7 +204,7 @@ final class OnboardingViewController: BaseViewController, UIPageViewControllerDe
     // MARK: - Actions
     
     @objc private func continueButtonTapped() {
-        guard currentIndex < pages.count - 1 else { // Проверка, что не выходим за пределы
+        guard currentIndex < pages.count - 1 else {
             delegateRouting?.routeToMainView()
             return
         }

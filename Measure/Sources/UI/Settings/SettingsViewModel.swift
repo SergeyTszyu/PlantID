@@ -60,9 +60,7 @@ class SettingsViewModel: NSObject, MFMailComposeViewControllerDelegate {
     }
     
     func rateApp() {
-//        openExternalLink(
-//            "https://apps.apple.com/app/id\(APP_ID)?action=write-review"
-//        )
+        
     }
 
     func suggestIdeaAction() {

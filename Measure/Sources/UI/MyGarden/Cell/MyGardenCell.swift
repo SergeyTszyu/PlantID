@@ -44,22 +44,6 @@ class MyGardenCell: UITableViewCell {
         plantImageView.layer.borderColor = UIColor(hexString: "#0A9E03")!.cgColor
      }
     
-    @IBAction func removeAction(_ sender: UIButton) {
-        delegate?.myGardenCellRemove(self)
-    }
-    
-    @IBAction func wateringAction(_ sender: UIButton) {
-        delegate?.myGardenCellWatering(self, isOverdue: wateringDateOverdue)
-    }
-    
-    @IBAction func sprayingAction(_ sender: UIButton) {
-        delegate?.myGardenCellSpraying(self, isOverdue: sprayingDateOverdue)
-    }
-    
-    @IBAction func fertilizAction(_ sender: UIButton) {
-        delegate?.myGardenCellWFertilize(self, isOverdue: fertilizeDateOverdue)
-    }
-    
     func fill(_ object: PlantIdentificationResponse) {
         plantImageView.image = UIImage(data: object.localImageData!)
         plantNameLabel.text = object.suggestions.first?.plantName

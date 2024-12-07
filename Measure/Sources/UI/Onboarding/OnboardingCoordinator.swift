@@ -1,11 +1,13 @@
 //
 //  OnboardingCoordinator.swift
 
-//
-//   on 04.01.2024.
-//
-
 import UIKit
+
+protocol OnboardingRouterDelegate: AnyObject {
+    func routeToTrialView()
+    func routeToPreparing()
+    func routeToMainView()
+}
 
 class OnboardingCoordinator: Coordinator {
 
