@@ -220,7 +220,7 @@ extension DataPickerViewController: UIPickerViewDataSource, UIPickerViewDelegate
         }
         
         let attributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor(hexString: "#0A9E03")
+            .foregroundColor: UIColor(hexString: "#F6E650")
         ]
         
         return NSAttributedString(string: title, attributes: attributes)

@@ -123,11 +123,11 @@ final class CustomButton: UIButton {
         
         let regularAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .heavy),
-            .foregroundColor: UIColor(hexString: "#0A9E03")!
+            .foregroundColor: UIColor(hexString: "#F6E650")!
         ]
         let priceAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .heavy),
-            .foregroundColor: UIColor(hexString: "#0A9E03")!
+            .foregroundColor: UIColor(hexString: "#F6E650")!
         ]
         
         let priceText = NSAttributedString(string: price, attributes: priceAttributes)

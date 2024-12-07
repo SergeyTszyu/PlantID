@@ -48,7 +48,7 @@ final class OpenPlantViewController: BaseViewController {
         images[1].image = UIImage(named: "Detail-Pot")!
         images[2].image = UIImage(named: "Detail-Cut")!
         topImageView.layer.cornerRadius = 100
-        topImageView.layer.borderColor = UIColor(hexString: "#0A9E03")?.cgColor
+        topImageView.layer.borderColor = UIColor(hexString: "#F6E650")?.cgColor
         topImageView.layer.borderWidth = 1
         
         if let imageData = plant.localImageData {

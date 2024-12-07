@@ -27,7 +27,7 @@ struct Theme {
         button.titleLabel?.font = Fonts.medium.addFont(17)
         button.setTitle(title, for: .normal)
         button.clipsToBounds = true
-        button.backgroundColor = UIColor(hexString: "#0A9E03")
+        button.backgroundColor = UIColor(hexString: "#F6E650")
     }
     
     static func image(fromLayer layer: CALayer) -> UIImage {

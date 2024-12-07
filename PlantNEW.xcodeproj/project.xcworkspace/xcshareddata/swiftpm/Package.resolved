@@ -1,5 +1,5 @@
 {
-  "originHash" : "b9d46f16077e65fc8b3dd0c10d54554e26c5300bb67a8dae0fb90de603c5eb49",
+  "originHash" : "17c85b7ec08bbd4c241581612ea77ca2826a7b8540c05a1e5afc86f41c9730b9",
   "pins" : [
     {
       "identity" : "apphudsdk",
@@ -8,15 +8,6 @@
       "state" : {
         "revision" : "cbdaff4937b9079ecaf2da92b62d8a7254deb0d0",
         "version" : "3.5.0"
-      }
-    },
-    {
-      "identity" : "gbdeviceinfo",
-      "kind" : "remoteSourceControl",
-      "location" : "https://github.com/lmirosevic/GBDeviceInfo",
-      "state" : {
-        "revision" : "f746467bc807c4014adf8acbb6524e3326388d73",
-        "version" : "7.2.0"
       }
     },
     {

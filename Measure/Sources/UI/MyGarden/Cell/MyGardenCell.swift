@@ -41,7 +41,7 @@ class MyGardenCell: UITableViewCell {
     
     func configure() {
         plantImageView.layer.borderWidth = 1
-        plantImageView.layer.borderColor = UIColor(hexString: "#0A9E03")!.cgColor
+        plantImageView.layer.borderColor = UIColor(hexString: "#F6E650")!.cgColor
      }
     
     func fill(_ object: PlantIdentificationResponse) {

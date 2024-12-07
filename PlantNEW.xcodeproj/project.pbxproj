@@ -11,7 +11,6 @@
 		993155E82B6BE26A0008EE8C /* AlertKit in Frameworks */ = {isa = PBXBuildFile; productRef = 993155E72B6BE26A0008EE8C /* AlertKit */; };
 		993155EA2B6BEC7F0008EE8C /* Url.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993155E92B6BEC7F0008EE8C /* Url.swift */; };
 		993155EC2B6BF5720008EE8C /* IncreasedTapAreaButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993155EB2B6BF5720008EE8C /* IncreasedTapAreaButton.swift */; };
-		999090592B88C190000FA8B6 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 999090582B88C190000FA8B6 /* AdSupport.framework */; };
 		BB0C7E2F2CA8338D00A57F6A /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = BB0C7E2E2CA8338D00A57F6A /* Lottie */; };
 		BB12DFFF2CEFEBED002CC421 /* Onboarding2ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB12DFFE2CEFEBED002CC421 /* Onboarding2ViewController.xib */; };
 		BB12E0002CEFEBED002CC421 /* Onboarding2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB12DFFD2CEFEBED002CC421 /* Onboarding2ViewController.swift */; };
@@ -43,7 +42,6 @@
 		BB4F75462C4402E100010CFF /* DiscountManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4F75452C4402E100010CFF /* DiscountManager.swift */; };
 		BB52F76D2C15E87D00FECB23 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52F76B2C15E87D00FECB23 /* HistoryCell.swift */; };
 		BB52F76E2C15E87D00FECB23 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB52F76C2C15E87D00FECB23 /* HistoryCell.xib */; };
-		BB52F7732C16D62D00FECB23 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB52F7722C16D62D00FECB23 /* CoreData.framework */; };
 		BB52F7872C16DEB000FECB23 /* HistoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52F7862C16DEB000FECB23 /* HistoryManager.swift */; };
 		BB52F7892C16DF1900FECB23 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB52F7882C16DF1900FECB23 /* CoreDataManager.swift */; };
 		BB56E7FB2C8A2E6000A3723B /* ScannerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB56E7FA2C8A2E6000A3723B /* ScannerViewController.xib */; };
@@ -60,10 +58,8 @@
 		BB7B2CA12BDABA7100A675C3 /* PaywallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B2CA02BDABA7100A675C3 /* PaywallButton.swift */; };
 		BB83E0CE2CDE755200FAC3A0 /* ScannerResultIdentify.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83E0CC2CDE755200FAC3A0 /* ScannerResultIdentify.swift */; };
 		BB83E0CF2CDE755200FAC3A0 /* ScannerResultIdentify.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB83E0CD2CDE755200FAC3A0 /* ScannerResultIdentify.xib */; };
-		BB9E2C2E2C2AC7F900F339FE /* GBDeviceInfo in Frameworks */ = {isa = PBXBuildFile; productRef = BB9E2C2D2C2AC7F900F339FE /* GBDeviceInfo */; };
 		BBA4C3762C8168F40092D8FF /* OnboardingFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4C3752C8168F40092D8FF /* OnboardingFirstViewController.swift */; };
 		BBA4C37E2C8300F30092D8FF /* OnboardingReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA4C37D2C8300F30092D8FF /* OnboardingReviewViewController.swift */; };
-		BBB2B25F2C21B52D0099B6FE /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9990905A2B88C196000FA8B6 /* iAd.framework */; };
 		BBB2B2622C21FADF0099B6FE /* TabsControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2B2612C21FADF0099B6FE /* TabsControl.swift */; };
 		BBBFF9322C985C7C00737C36 /* ApphudSDK in Frameworks */ = {isa = PBXBuildFile; productRef = BBBFF9312C985C7C00737C36 /* ApphudSDK */; };
 		BBBFF9352C985D1400737C36 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BBBFF9342C985D1400737C36 /* RealmSwift */; };
@@ -89,7 +85,6 @@
 		FA6E507B2B4FA0BF0041B7EC /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507A2B4FA0BF0041B7EC /* SettingsHeader.swift */; };
 		FA6E507D2B50F2F90041B7EC /* CustomTrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507C2B50F2F80041B7EC /* CustomTrialView.swift */; };
 		FA6E50802B5109480041B7EC /* ThemeEnumForTrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507F2B5109480041B7EC /* ThemeEnumForTrialView.swift */; };
-		FA6E515B2B59F9A30041B7EC /* ARKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA6E515A2B59F9A30041B7EC /* ARKit.framework */; };
 		FA7183BD2C7BAD4A0068974B /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FA7183BB2C7BAD4A0068974B /* History.xcdatamodeld */; };
 		FAC354292B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAC354202B47C7B200C473C5 /* SFProDisplay-SemiBoldItalic.ttf */; };
 		FAC3542A2B47C7B300C473C5 /* SFProDisplay-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FAC354212B47C7B200C473C5 /* SFProDisplay-Medium.ttf */; };
@@ -285,13 +280,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBBFF9352C985D1400737C36 /* RealmSwift in Frameworks */,
-				BBB2B25F2C21B52D0099B6FE /* iAd.framework in Frameworks */,
 				BB0C7E2F2CA8338D00A57F6A /* Lottie in Frameworks */,
 				BBBFF9322C985C7C00737C36 /* ApphudSDK in Frameworks */,
-				BB52F7732C16D62D00FECB23 /* CoreData.framework in Frameworks */,
-				FA6E515B2B59F9A30041B7EC /* ARKit.framework in Frameworks */,
-				BB9E2C2E2C2AC7F900F339FE /* GBDeviceInfo in Frameworks */,
-				999090592B88C190000FA8B6 /* AdSupport.framework in Frameworks */,
 				993155E82B6BE26A0008EE8C /* AlertKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -841,7 +831,6 @@
 			name = PlantNEW;
 			packageProductDependencies = (
 				993155E72B6BE26A0008EE8C /* AlertKit */,
-				BB9E2C2D2C2AC7F900F339FE /* GBDeviceInfo */,
 				BBBFF9312C985C7C00737C36 /* ApphudSDK */,
 				BBBFF9342C985D1400737C36 /* RealmSwift */,
 				BB0C7E2E2CA8338D00A57F6A /* Lottie */,
@@ -926,7 +915,6 @@
 			mainGroup = FAEF713A2B465668000C232A;
 			packageReferences = (
 				993155E62B6BE26A0008EE8C /* XCRemoteSwiftPackageReference "SPAlert" */,
-				BB9E2C2C2C2AC7F900F339FE /* XCRemoteSwiftPackageReference "GBDeviceInfo" */,
 				BBBFF9302C985C7C00737C36 /* XCRemoteSwiftPackageReference "ApphudSDK" */,
 				BBBFF9332C985D1400737C36 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				BB0C7E2D2CA8338D00A57F6A /* XCRemoteSwiftPackageReference "lottie-spm" */,
@@ -1465,14 +1453,6 @@
 				minimumVersion = 4.5.0;
 			};
 		};
-		BB9E2C2C2C2AC7F900F339FE /* XCRemoteSwiftPackageReference "GBDeviceInfo" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lmirosevic/GBDeviceInfo";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.2.0;
-			};
-		};
 		BBBFF9302C985C7C00737C36 /* XCRemoteSwiftPackageReference "ApphudSDK" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apphud/ApphudSDK";
@@ -1501,11 +1481,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = BB0C7E2D2CA8338D00A57F6A /* XCRemoteSwiftPackageReference "lottie-spm" */;
 			productName = Lottie;
-		};
-		BB9E2C2D2C2AC7F900F339FE /* GBDeviceInfo */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = BB9E2C2C2C2AC7F900F339FE /* XCRemoteSwiftPackageReference "GBDeviceInfo" */;
-			productName = GBDeviceInfo;
 		};
 		BBBFF9312C985C7C00737C36 /* ApphudSDK */ = {
 			isa = XCSwiftPackageProductDependency;
