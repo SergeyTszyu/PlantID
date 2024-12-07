@@ -137,9 +137,9 @@ private extension TabsControl {
                let textColor = UIColor(hexString: "#FFFFFF")!
                button.setTitleColor(textColor, for: .normal)
                button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
-               button.backgroundColor = UIColor(hexString: "#0A9E03")!
+               button.backgroundColor = UIColor(hexString: "#58855E")!
            } else {
-               let textColor = UIColor(hexString: "#0A9E03")!
+               let textColor = UIColor(hexString: "#58855E")!
                button.setTitleColor(textColor, for: .normal)
                button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
                button.backgroundColor = .clear

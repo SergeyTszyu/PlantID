@@ -95,7 +95,7 @@ extension ScannerResultIdentify: UITableViewDataSource {
                 return cell
             case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultFooterCell", for: indexPath) as! ScannerResultFooterCell
-                cell.fill("Main Information:", bottomText: result.suggestions.first!.plantDetails?.wikiDescription?.value ?? "")
+                cell.fill("Plant details:", bottomText: result.suggestions.first!.plantDetails?.wikiDescription?.value ?? "")
                 return cell
             default:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "ScannerResultFooterCell", for: indexPath) as! ScannerResultFooterCell

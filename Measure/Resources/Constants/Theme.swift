@@ -22,8 +22,8 @@ struct Theme {
     static var simplicityColor = UIColor(hexString: "#D0D0DB")!
     
     static func buttonStyle(_ button: UIButton, title: String = "") {
-        button.setTitleColor(Theme.whiteColor, for: .normal)
-        button.layer.cornerRadius = 20
+        button.setTitleColor(Theme.blackColor, for: .normal)
+        button.layer.cornerRadius = 10
         button.titleLabel?.font = Fonts.medium.addFont(17)
         button.setTitle(title, for: .normal)
         button.clipsToBounds = true

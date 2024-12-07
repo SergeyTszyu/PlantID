@@ -69,7 +69,7 @@ final class OpenPlantViewController: BaseViewController {
         }
         
         if let wDate = plant.wateringDate {
-            careButtons[0].backgroundColor = UIColor(hexString: "#FE8331")
+            careButtons[0].backgroundColor = UIColor(hexString: "#58855E")
             
             let components = calendar.dateComponents([.day], from: currentDate, to: wDate)
             let daysDifference = components.day ?? 0
@@ -94,7 +94,7 @@ final class OpenPlantViewController: BaseViewController {
         }
         
         if let pot = plant.potDate {
-            careButtons[1].backgroundColor = UIColor(hexString: "#FE8331")
+            careButtons[1].backgroundColor = UIColor(hexString: "#58855E")
             
             let components = calendar.dateComponents([.day], from: currentDate, to: pot)
             let daysDifference = components.day ?? 0
@@ -119,7 +119,7 @@ final class OpenPlantViewController: BaseViewController {
         }
         
         if let cut = plant.cutDate {
-            careButtons[2].backgroundColor = UIColor(hexString: "#FE8331")
+            careButtons[2].backgroundColor = UIColor(hexString: "#58855E")
             
             let components = calendar.dateComponents([.day], from: currentDate, to: cut)
             let daysDifference = components.day ?? 0

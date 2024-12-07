@@ -45,7 +45,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.92156862745098034" green="0.94509803921568625" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ztk-ay-xUx" firstAttribute="top" secondItem="vu1-3I-9jy" secondAttribute="bottom" constant="6" id="3kG-ul-8cv"/>
                             <constraint firstItem="vu1-3I-9jy" firstAttribute="leading" secondItem="EuS-JV-kBO" secondAttribute="trailing" constant="12" id="7pH-zV-oA3"/>
@@ -58,7 +58,7 @@
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="20"/>
+                                <integer key="value" value="10"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>

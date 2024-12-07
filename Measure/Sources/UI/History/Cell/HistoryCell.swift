@@ -70,7 +70,7 @@ private extension HistoryCell {
         historyImageView.layer.cornerRadius = 32
         historyImageView.contentMode = .scaleAspectFill
         
-        historyContentView.layer.cornerRadius = 16
+        historyContentView.layer.cornerRadius = 10
         historyContentView.backgroundColor = Theme.whiteColor
         
         backgroundColor = .clear

@@ -29,7 +29,7 @@ class ScannerNotFoundViewController: BaseViewController {
         case .isHealthy:
             typeImagegVIew.image = UIImage(named: "isHealthy")!
             topTextLabel.text = "Plant is healthy!"
-            bottomTextLabel.text = "Your Strelitzia is thriving. Keep up the good care!"
+            bottomTextLabel.text = "Your plant is flourishing. Keep up the good care!"
         }
     }
     

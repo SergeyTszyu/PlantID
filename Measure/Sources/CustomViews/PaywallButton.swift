@@ -33,11 +33,11 @@ final class CustomButton: UIButton {
     }
 
     // MARK: - Setup
-
+    
     private func setupViews() {
         layer.cornerRadius = 20
         clipsToBounds = true
-        backgroundColor = .white
+        backgroundColor = UIColor(hexString: "#0A9E03")?.withAlphaComponent(0.05)
         
         topLabel.textAlignment = .left
         topLabel.font = UIFont.systemFont(ofSize: 16, weight: .bold)
@@ -54,7 +54,7 @@ final class CustomButton: UIButton {
         
         discountLabel.textAlignment = .left
         discountLabel.font = UIFont.systemFont(ofSize: 18, weight: .heavy)
-        discountLabel.textColor = UIColor(hexString: "#FFFFFF")
+        discountLabel.textColor = UIColor(hexString: "#58855E")
         discountLabel.text = "Save 66%"
         
         checkBoxImageView.contentMode = .scaleAspectFit
@@ -123,11 +123,11 @@ final class CustomButton: UIButton {
         
         let regularAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .heavy),
-            .foregroundColor: UIColor(hexString: "#F6E650")!
+            .foregroundColor: UIColor(hexString: "#58855E")!
         ]
         let priceAttributes: [NSAttributedString.Key: Any] = [
             .font: UIFont.systemFont(ofSize: 18, weight: .heavy),
-            .foregroundColor: UIColor(hexString: "#F6E650")!
+            .foregroundColor: UIColor(hexString: "#58855E")!
         ]
         
         let priceText = NSAttributedString(string: price, attributes: priceAttributes)
@@ -150,6 +150,7 @@ final class CustomButton: UIButton {
                 discountLabel.centerYAnchor.constraint(equalTo: orangeImageView.centerYAnchor),
             ])
         } else {
+            discountLabel.isHidden = true
             NSLayoutConstraint.activate([
                 justLabel.heightAnchor.constraint(equalToConstant: 0)
             ])

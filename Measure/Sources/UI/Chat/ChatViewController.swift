@@ -285,12 +285,12 @@ class ChatMessageCell: UITableViewCell {
         messageLabel.text = text
         
         if isBot {
-            bubbleBackgroundView.backgroundColor = UIColor(hexString: "#CFCFCF")?.withAlphaComponent(0.6)
+            bubbleBackgroundView.backgroundColor = UIColor(hexString: "#EBF1EC")?.withAlphaComponent(0.6)
             messageLabel.textColor = .black
             avatarImageView.isHidden = false
             bubbleBackgroundView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner, .layerMaxXMaxYCorner]
         } else {
-            bubbleBackgroundView.backgroundColor = UIColor(hexString: "#0A9E03")?.withAlphaComponent(0.6)
+            bubbleBackgroundView.backgroundColor = UIColor(hexString: "#58855E")!
             messageLabel.textColor = .white
             avatarImageView.isHidden = true
             bubbleBackgroundView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner, .layerMinXMaxYCorner]
