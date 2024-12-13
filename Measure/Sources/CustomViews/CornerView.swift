@@ -1,7 +1,5 @@
 //
 //  CornerView.swift
-//  PlantID
-
 
 import Foundation
 import UIKit

@@ -1,6 +1,5 @@
 //
 //  ScannerNotFoundViewController.swift
-//  PlantID
 
 import UIKit
 

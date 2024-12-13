@@ -55,6 +55,8 @@
 		BB5B172F2C88869500E0769D /* DataPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5B172D2C88869500E0769D /* DataPickerViewController.swift */; };
 		BB5B17302C88869500E0769D /* DataPickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB5B172E2C88869500E0769D /* DataPickerViewController.xib */; };
 		BB5B17322C88895A00E0769D /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5B17312C88895900E0769D /* CornerView.swift */; };
+		BB69748F2D07AD0400A1AE0C /* MushroomIDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB69748E2D07AD0400A1AE0C /* MushroomIDViewController.xib */; };
+		BB6974902D07AD0400A1AE0C /* MushroomIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69748D2D07AD0400A1AE0C /* MushroomIDViewController.swift */; };
 		BB7B2CA12BDABA7100A675C3 /* PaywallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7B2CA02BDABA7100A675C3 /* PaywallButton.swift */; };
 		BB83E0CE2CDE755200FAC3A0 /* ScannerResultIdentify.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB83E0CC2CDE755200FAC3A0 /* ScannerResultIdentify.swift */; };
 		BB83E0CF2CDE755200FAC3A0 /* ScannerResultIdentify.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB83E0CD2CDE755200FAC3A0 /* ScannerResultIdentify.xib */; };
@@ -81,6 +83,8 @@
 		BBD9B4012C8AADCE00E138E6 /* ScannerNotFoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9B3FE2C8AADCE00E138E6 /* ScannerNotFoundViewController.swift */; };
 		BBD9B40D2C8BE56900E138E6 /* ScannerPlantIsHealthyController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBD9B40C2C8BE56900E138E6 /* ScannerPlantIsHealthyController.xib */; };
 		BBD9B40E2C8BE56900E138E6 /* ScannerPlantIsHealthyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD9B40B2C8BE56900E138E6 /* ScannerPlantIsHealthyController.swift */; };
+		BBDCF2792D0B388C008849AF /* MushroomIDCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDCF2772D0B388C008849AF /* MushroomIDCell.swift */; };
+		BBDCF27A2D0B388C008849AF /* MushroomIDCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBDCF2782D0B388C008849AF /* MushroomIDCell.xib */; };
 		BBFE10002CE0FD4600D46739 /* ScannerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE0FFF2CE0FD4600D46739 /* ScannerManager.swift */; };
 		FA6E507B2B4FA0BF0041B7EC /* SettingsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507A2B4FA0BF0041B7EC /* SettingsHeader.swift */; };
 		FA6E507D2B50F2F90041B7EC /* CustomTrialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6E507C2B50F2F80041B7EC /* CustomTrialView.swift */; };
@@ -202,6 +206,8 @@
 		BB5B172D2C88869500E0769D /* DataPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPickerViewController.swift; sourceTree = "<group>"; };
 		BB5B172E2C88869500E0769D /* DataPickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataPickerViewController.xib; sourceTree = "<group>"; };
 		BB5B17312C88895900E0769D /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		BB69748D2D07AD0400A1AE0C /* MushroomIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomIDViewController.swift; sourceTree = "<group>"; };
+		BB69748E2D07AD0400A1AE0C /* MushroomIDViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MushroomIDViewController.xib; sourceTree = "<group>"; };
 		BB7B2CA02BDABA7100A675C3 /* PaywallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallButton.swift; sourceTree = "<group>"; };
 		BB83E0CC2CDE755200FAC3A0 /* ScannerResultIdentify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerResultIdentify.swift; sourceTree = "<group>"; };
 		BB83E0CD2CDE755200FAC3A0 /* ScannerResultIdentify.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerResultIdentify.xib; sourceTree = "<group>"; };
@@ -225,6 +231,8 @@
 		BBD9B3FF2C8AADCE00E138E6 /* ScannerNotFoundViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerNotFoundViewController.xib; sourceTree = "<group>"; };
 		BBD9B40B2C8BE56900E138E6 /* ScannerPlantIsHealthyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerPlantIsHealthyController.swift; sourceTree = "<group>"; };
 		BBD9B40C2C8BE56900E138E6 /* ScannerPlantIsHealthyController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ScannerPlantIsHealthyController.xib; sourceTree = "<group>"; };
+		BBDCF2772D0B388C008849AF /* MushroomIDCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MushroomIDCell.swift; sourceTree = "<group>"; };
+		BBDCF2782D0B388C008849AF /* MushroomIDCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MushroomIDCell.xib; sourceTree = "<group>"; };
 		BBFE0FFF2CE0FD4600D46739 /* ScannerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerManager.swift; sourceTree = "<group>"; };
 		FA6E507A2B4FA0BF0041B7EC /* SettingsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsHeader.swift; sourceTree = "<group>"; };
 		FA6E507C2B50F2F80041B7EC /* CustomTrialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTrialView.swift; sourceTree = "<group>"; };
@@ -457,6 +465,16 @@
 			path = DataPicker;
 			sourceTree = "<group>";
 		};
+		BB69748C2D07ACEA00A1AE0C /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				BBDCF2762D0B3875008849AF /* MushroomIDCell */,
+				BB69748D2D07AD0400A1AE0C /* MushroomIDViewController.swift */,
+				BB69748E2D07AD0400A1AE0C /* MushroomIDViewController.xib */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		BB83E0CB2CDE753200FAC3A0 /* ScannerResultIdentify */ = {
 			isa = PBXGroup;
 			children = (
@@ -549,6 +567,15 @@
 				BBD9B40C2C8BE56900E138E6 /* ScannerPlantIsHealthyController.xib */,
 			);
 			path = ScannerPlantIsHealthy;
+			sourceTree = "<group>";
+		};
+		BBDCF2762D0B3875008849AF /* MushroomIDCell */ = {
+			isa = PBXGroup;
+			children = (
+				BBDCF2772D0B388C008849AF /* MushroomIDCell.swift */,
+				BBDCF2782D0B388C008849AF /* MushroomIDCell.xib */,
+			);
+			path = MushroomIDCell;
 			sourceTree = "<group>";
 		};
 		FA6E50792B4FA07A0041B7EC /* Cell */ = {
@@ -769,6 +796,7 @@
 		FAEF718F2B4659E4000C232A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BB69748C2D07ACEA00A1AE0C /* New Group */,
 				BB12E01E2CF197BF002CC421 /* EditPlant */,
 				BB4164452CECDC4600D3281E /* Chat */,
 				BBC9EEE72CEA301400B48FD8 /* OpenPlant */,
@@ -936,6 +964,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB19E0BA2C85935B009CED7D /* MyGardenCell.xib in Resources */,
+				BB69748F2D07AD0400A1AE0C /* MushroomIDViewController.xib in Resources */,
 				BB5B17262C88323300E0769D /* ReviewCell.xib in Resources */,
 				BB4164482CECDC5100D3281E /* ChatViewController.xib in Resources */,
 				FAC3542D2B47C7B300C473C5 /* SFProDisplay-BlackItalic.ttf in Resources */,
@@ -970,6 +999,7 @@
 				BB19E0AF2C85478A009CED7D /* SettingsSwitchCell.xib in Resources */,
 				FAC3542F2B47C7B300C473C5 /* SFProDisplay-HeavyItalic.ttf in Resources */,
 				BB41644D2CEE629F00D3281E /* OpenPlantEditViewController.xib in Resources */,
+				BBDCF27A2D0B388C008849AF /* MushroomIDCell.xib in Resources */,
 				BB56E7FB2C8A2E6000A3723B /* ScannerViewController.xib in Resources */,
 				FAEF71502B46566A000C232A /* Assets.xcassets in Resources */,
 				BBCC6F982CF680AC001C90A4 /* AnimationScan.json in Resources */,
@@ -1003,6 +1033,7 @@
 				FAEF71992B465CC4000C232A /* OboardingViewModel.swift in Sources */,
 				BBC9EEEB2CEA302C00B48FD8 /* OpenPlantViewController.swift in Sources */,
 				993155EA2B6BEC7F0008EE8C /* Url.swift in Sources */,
+				BBDCF2792D0B388C008849AF /* MushroomIDCell.swift in Sources */,
 				BB4164532CEFB92C00D3281E /* Onboarding1ViewController.swift in Sources */,
 				FAD536C12B4D1C45009C57EE /* SettingsViewController.swift in Sources */,
 				BB1E12562CDB7B160042E80D /* NewMyGardenViewController.swift in Sources */,
@@ -1031,6 +1062,7 @@
 				BB4C5EC92C149341003F23EB /* HistoryViewController.swift in Sources */,
 				BB52F7892C16DF1900FECB23 /* CoreDataManager.swift in Sources */,
 				BBFE10002CE0FD4600D46739 /* ScannerManager.swift in Sources */,
+				BB6974902D07AD0400A1AE0C /* MushroomIDViewController.swift in Sources */,
 				FAEF718B2B46595E000C232A /* AppCoordinator.swift in Sources */,
 				9910CA312B6A64E600336735 /* PremiumManager.swift in Sources */,
 				BBC0D74A2C8A82D400BBBEB9 /* PlantModels.swift in Sources */,
@@ -1248,7 +1280,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
@@ -1287,7 +1319,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 9;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;

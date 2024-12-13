@@ -307,9 +307,16 @@ final class ScannerManager: AnyObject {
                 realm.add(response)
             }
         } catch {
-            print("Ошибка при сохранении объекта: \(error)")
         }
     }
 
 }
 
+// MARK: -
+
+extension ScannerManager {
+    
+    func scanMushroom() {
+        
+    }
+}

@@ -1,6 +1,4 @@
 //
-//  SettingsSwitchCell.swift
-//  PlantID
 
 import UIKit
 

@@ -1,6 +1,5 @@
 //
 //  MyGardenCell.swift
-//  PlantID
 
 import UIKit
 

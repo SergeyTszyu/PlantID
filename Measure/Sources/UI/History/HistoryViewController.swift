@@ -160,7 +160,6 @@ extension HistoryViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let historyItem = historyData?[indexPath.section] else { return }
                 
-        // Найдем объект PlantIdentificationResponse по ID из истории
         let realm = try! Realm()
         if let plant = realm.object(ofType: PlantIdentificationResponse.self, forPrimaryKey: historyItem.id) {
             

@@ -131,8 +131,6 @@ class PlantIdentificationResponse: Object, Decodable {
     }
 }
 
-
-// MARK: - PlantResponse
 class PlantResponse: Object, Decodable {
     @Persisted var id: Int = 0
     @Persisted var customID: String? = nil

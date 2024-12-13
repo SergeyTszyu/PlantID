@@ -1,6 +1,5 @@
 //
 //  ScannerResultViewController.swift
-//  PlantID
 
 import UIKit
 import RealmSwift

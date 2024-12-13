@@ -1,6 +1,5 @@
 //
 //  ScannerPlantIsHealthyController.swift
-//  PlantID
 
 import UIKit
 
